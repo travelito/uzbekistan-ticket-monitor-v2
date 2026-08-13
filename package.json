@@ -1,0 +1,29 @@
+{
+  "name": "uzbekistan-ticket-monitor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --runInBand",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jamaster21/uzbekistan-ticket-monitor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Jamaster21/uzbekistan-ticket-monitor/issues"
+  },
+  "homepage": "https://github.com/Jamaster21/uzbekistan-ticket-monitor#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.112.2",
+    "dotenv": "^17.4.2"
+  },
+  "devDependencies": {
+    "jest": "^30.4.2"
+  }
+}
