@@ -86,6 +86,41 @@ describe('Availability detector', () => {
     expect(matches.map((train) => train.trainNumber)).toEqual(['770Ф']);
   });
 
+  it('matches trains departing within a window that crosses midnight', () => {
+    const trains = [
+      {
+        trainNumber: '712Ф',
+        trainType: 'Sharq',
+        departure: '12.10.2026 00:02',
+        arrival: '12.10.2026 02:27',
+        cars: [{ type: 'Сидячий', availableSeats: 216 }]
+      },
+      {
+        trainNumber: '772Ф',
+        trainType: 'Afrosiyob',
+        departure: '12.10.2026 22:23',
+        arrival: '13.10.2026 00:01',
+        cars: [{ type: 'Сидячий', availableSeats: 88 }]
+      },
+      {
+        trainNumber: '766Ф',
+        trainType: 'Afrosiyob',
+        departure: '12.10.2026 09:53',
+        arrival: '12.10.2026 11:39',
+        cars: [{ type: 'Сидячий', availableSeats: 5 }]
+      }
+    ];
+
+    const matches = findMatchingTrains(trains, {
+      passengers: 5,
+      train_types: [],
+      depart_window_start: '22:23',
+      depart_window_end: '00:01'
+    });
+
+    expect(matches.map((train) => train.trainNumber)).toEqual(['772Ф']);
+  });
+
   it('should notify when payloads differ', () => {
     const currentPayload = {
       matchingTrains: [{ trainNumber: '7100' }]

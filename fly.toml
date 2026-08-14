@@ -1,0 +1,28 @@
+# fly.toml app configuration file generated for uzbekistan-ticket-monitor-v2 on 2026-08-14T13:10:14+05:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'uzbekistan-ticket-monitor-v2'
+primary_region = 'ams'
+
+[build]
+  dockerfile = 'Dockerfile'
+
+[deploy]
+  strategy = 'immediate'
+
+[env]
+  NODE_ENV = 'production'
+
+[processes]
+  app = 'npm start'
+
+[[restart]]
+  policy = 'on-failure'
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
+  memory_mb = 1024

@@ -44,6 +44,11 @@ function isWithinWindow(timestamp, window) {
     return false;
   }
 
+  // Window crosses midnight (e.g. 22:23-00:01) when start is after end
+  if (window.start > window.end) {
+    return time >= window.start || time <= window.end;
+  }
+
   return time >= window.start && time <= window.end;
 }
 
