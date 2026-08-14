@@ -255,7 +255,7 @@ async function handleNewMessage(message) {
   if (text.startsWith('/status')) {
     const requests = await getMonitoringRequestsForChat(chatId);
     if (!requests || requests.length === 0) {
-      await sendMessage(chatId, 'У вас нет активных мониторингов. Используйте /monitor для создания нового.\n\nЧтобы удалить, напишите /cancel <ID>');
+      await sendMessage(chatId, 'У вас пока нет активных запросов мониторинга.');
       return;
     }
 
@@ -272,18 +272,19 @@ async function handleNewMessage(message) {
       })
     );
 
-    const lines = enrichedRequests.map((request) => {
-      const shortId = request.id.substring(0, 8);
-      return formatMonitoringRequestStatus(request, shortId);
-    });
+    await sendMessage(chatId, '*Ваши активные мониторинги:*');
 
-    const keyboard = enrichedRequests.map((request) => ([{
-      text: `❌ Удалить ${request.originStationName} → ${request.destinationStationName} (${request.id.substring(0, 8)})`,
-      callback_data: `cancel:${request.id}`
-    }]));
-    await sendMessage(chatId, `*Ваши активные мониторинги:*\n\n${lines.join('\n\n')}\n\nЧтобы удалить, напишите /cancel <ID>`, {
-      reply_markup: { inline_keyboard: keyboard }
-    });
+    for (const request of enrichedRequests) {
+      const shortId = request.id.substring(0, 8);
+      await sendMessage(chatId, formatMonitoringRequestStatus(request, shortId), {
+        reply_markup: {
+          inline_keyboard: [[{
+            text: `❌ Удалить ${request.originStationName} → ${request.destinationStationName} (${shortId})`,
+            callback_data: `cancel:${request.id}`
+          }]]
+        }
+      });
+    }
     return;
   }
 
