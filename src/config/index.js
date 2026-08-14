@@ -16,7 +16,7 @@ const config = {
   supabaseUrl: process.env.SUPABASE_URL,
   supabaseServiceRoleKey: process.env.SUPABASE_SERVICE_ROLE_KEY,
   telegramBotToken: process.env.TELEGRAM_BOT_TOKEN,
-  checkIntervalMinutes: Number(process.env.CHECK_INTERVAL_MINUTES ?? 30),
+  checkIntervalMinutes: Number(process.env.CHECK_INTERVAL_MINUTES ?? 15),
   defaultRoute: {
     date: process.env.DEFAULT_TEST_DATE || '2026-09-08',
     depStationCode: process.env.DEFAULT_DEP_STATION_CODE || '2900000',

@@ -42,4 +42,55 @@ describe('Availability parser', () => {
       }
     ]);
   });
+
+  it('normalizes the live directions.forward Railway response', () => {
+    const sampleResponse = {
+      data: {
+        directions: {
+          forward: {
+            trains: [
+              {
+                type: 'СКРСТ',
+                number: '766Ф',
+                departureDate: '12.10.2026 07:30',
+                arrivalDate: '12.10.2026 11:39',
+                brand: 'Afrosiyob',
+                originRoute: {
+                  depStationName: 'Ташкент Центральный',
+                  arvStationName: 'Бухара'
+                },
+                cars: [{ type: 'Сидячий', freeSeats: 2 }]
+              }
+            ]
+          }
+        }
+      }
+    };
+
+    expect(parseTrainList(sampleResponse)).toEqual([
+      {
+        trainNumber: '766Ф',
+        trainType: 'Afrosiyob',
+        origin: 'Ташкент Центральный',
+        destination: 'Бухара',
+        departure: '12.10.2026 07:30',
+        arrival: '12.10.2026 11:39',
+        cars: [{ type: 'Сидячий', availableSeats: 2 }]
+      }
+    ]);
+  });
+
+  it('also parses an optional backward direction', () => {
+    const result = parseTrainList({
+      data: {
+        directions: {
+          forward: { trains: [] },
+          backward: { trains: [{ number: '054Щ', cars: [] }] }
+        }
+      }
+    });
+
+    expect(result).toHaveLength(1);
+    expect(result[0].trainNumber).toBe('054Щ');
+  });
 });

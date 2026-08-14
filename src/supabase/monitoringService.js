@@ -95,8 +95,8 @@ async function createMonitoringRequest({ userId, originStationId, destinationSta
       chatId: String(userId),
       originStationId,
       destinationStationId,
-      originStationCode: originStation.code,
-      destinationStationCode: destinationStation.code,
+      depStationCode: originStation.code,
+      arvStationCode: destinationStation.code,
       trainTypes,
       departWindowStart,
       departWindowEnd
@@ -185,11 +185,76 @@ async function getMonitoringRequestById(requestId) {
   return data ? enrichMonitoringRequest(data) : null;
 }
 
+async function cancelMonitoringRequest(shortId, chatId) {
+  const client = getSupabaseClient();
+  if (!client) {
+    logger.warn('supabase.monitoring', 'Supabase client unavailable, cannot cancel monitoring request');
+    return null;
+  }
+
+  const { data, error } = await client
+    .from('monitoring_requests')
+    .select('*')
+    .eq('status', 'active');
+
+  if (error) {
+    logger.error('supabase.monitoring', 'Failed to find monitoring request to cancel', {
+      error: error.message,
+      shortId,
+      chatId
+    });
+    return null;
+  }
+
+  const normalizedShortId = String(shortId).trim().toLowerCase();
+  const matchingRequests = (Array.isArray(data) ? data : [])
+    .filter((request) => String(request.id || '').toLowerCase().startsWith(normalizedShortId))
+    .map(enrichMonitoringRequest);
+
+  matchingRequests.forEach((request) => {
+    logger.info('supabase.monitoring', 'Comparing monitoring request owner for cancellation', {
+      shortId: normalizedShortId,
+      requestId: request.id,
+      callerChatId: String(chatId),
+      requestChatId: request.chat_id == null ? null : String(request.chat_id),
+      ownerMatches: String(request.chat_id) === String(chatId)
+    });
+  });
+
+  const ownedRequests = matchingRequests
+    .filter((request) => String(request.chat_id) === String(chatId));
+
+  if (ownedRequests.length !== 1) {
+    return null;
+  }
+
+  const request = ownedRequests[0];
+  const { data: updated, error: updateError } = await client
+    .from('monitoring_requests')
+    .delete()
+    .eq('id', request.id)
+    .eq('status', 'active')
+    .select()
+    .maybeSingle();
+
+  if (updateError) {
+    logger.error('supabase.monitoring', 'Failed to cancel monitoring request', {
+      error: updateError.message,
+      requestId: request.id,
+      chatId
+    });
+    return null;
+  }
+
+  return updated ? enrichMonitoringRequest(updated) : null;
+}
+
 module.exports = {
   findStationsByTerm,
   findStationById,
   createMonitoringRequest,
   getMonitoringRequestsForChat,
   getActiveMonitoringRequests,
-  getMonitoringRequestById
+  getMonitoringRequestById,
+  cancelMonitoringRequest
 };

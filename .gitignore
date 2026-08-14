@@ -1,2 +1,10 @@
 .env
 node_modules/
+
+# Local test scripts and runtime logs
+node.err
+node.log
+src/services/test-scheduler-multi.js
+src/services/test-scheduler.js
+src/services/test-worker-cycle.js
+src/telegram/test_create_monitoring.js

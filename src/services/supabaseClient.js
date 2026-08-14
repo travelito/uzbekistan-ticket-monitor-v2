@@ -18,6 +18,18 @@ function normalizeSupabaseUrl(url) {
   }
 }
 
+function parseNotes(notes) {
+  if (!notes) {
+    return {};
+  }
+
+  try {
+    return typeof notes === 'string' ? JSON.parse(notes) : notes;
+  } catch (error) {
+    return {};
+  }
+}
+
 function getSupabaseClient() {
   if (supabaseClient) {
     return supabaseClient;
@@ -70,7 +82,7 @@ async function findStationsByTerm(term) {
   const { data, error } = await client
     .from('stations')
     .select('*')
-    .or(`name.ilike.${searchTerm},station_name.ilike.${searchTerm},title.ilike.${searchTerm},code.ilike.${searchTerm},station_code.ilike.${searchTerm}`)
+    .or(`name.ilike.${searchTerm},code.ilike.${searchTerm}`)
     .limit(10);
 
   if (error) {
@@ -112,7 +124,7 @@ async function getActiveMonitoringRequests() {
   const { data, error } = await client
     .from('monitoring_requests')
     .select('*')
-    .eq('is_active', true)
+    .eq('status', 'active')
     .order('created_at', { ascending: true });
 
   if (error) {
@@ -120,7 +132,20 @@ async function getActiveMonitoringRequests() {
     return [];
   }
 
-  return Array.isArray(data) ? data : [];
+  return Array.isArray(data) ? data.map((req) => {
+    // Enrich with parsed notes
+    const parsed = parseNotes(req.notes);
+    return {
+      ...req,
+      dep_station_code: parsed.depStationCode || null,
+      arv_station_code: parsed.arvStationCode || null,
+      user_id: req.user_id || parsed.userId || parsed.chatId || null,
+      chat_id: req.chat_id || parsed.chatId || parsed.userId || null,
+      train_types: parsed.trainTypes || null,
+      depart_window_start: parsed.departWindowStart || null,
+      depart_window_end: parsed.departWindowEnd || null
+    };
+  }) : [];
 }
 
 module.exports = {

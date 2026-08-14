@@ -1,7 +1,15 @@
 const { getSupabaseClient } = require('../services/supabaseClient');
 const logger = require('../utils/logger');
 
-async function saveAvailabilityCheck({ requestId }) {
+async function saveAvailabilityCheck({
+  requestId,
+  searchMeta = null,
+  rawResponse = null,
+  normalizedTrains = [],
+  available = false,
+  availableSeats = null,
+  errorMessage = null
+}) {
   const client = getSupabaseClient();
   if (!client) {
     logger.warn('supabase.availability', 'Supabase client unavailable, skipping saveAvailabilityCheck');
@@ -10,7 +18,16 @@ async function saveAvailabilityCheck({ requestId }) {
 
   const payload = {
     monitoring_request_id: requestId,
-    checked_at: new Date().toISOString()
+    checked_at: new Date().toISOString(),
+    success: !errorMessage,
+    available,
+    available_seats: availableSeats,
+    response_data: {
+      searchMeta,
+      normalizedTrains,
+      rawResponse
+    },
+    error_message: errorMessage
   };
 
   const { data, error } = await client.from('availability_checks').insert(payload).select().single();

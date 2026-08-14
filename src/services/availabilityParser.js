@@ -70,17 +70,18 @@ function normalizeTrain(rawTrain) {
     'originStationName',
     'origin',
     'from'
-  ]);
+  ]) || rawTrain.originRoute?.depStationName || rawTrain.subRoute?.depStationName;
 
   const destination = firstAvailableValue(rawTrain, [
     'arvStationName',
     'destinationStationName',
     'destination',
     'to'
-  ]);
+  ]) || rawTrain.originRoute?.arvStationName || rawTrain.subRoute?.arvStationName;
 
   const departure = firstAvailableValue(rawTrain, [
     'departureDateTime',
+    'departureDate',
     'depDateTime',
     'depTime',
     'departure'
@@ -88,6 +89,7 @@ function normalizeTrain(rawTrain) {
 
   const arrival = firstAvailableValue(rawTrain, [
     'arrivalDateTime',
+    'arrivalDate',
     'arvDateTime',
     'arrTime',
     'arrival'
@@ -115,7 +117,13 @@ function parseTrainList(response) {
     return [];
   }
 
-  const trains = response?.data?.trains ?? response?.trains ?? response?.data ?? [];
+  const directions = response?.data?.directions;
+  const trains = directions
+    ? [
+        ...(Array.isArray(directions.forward?.trains) ? directions.forward.trains : []),
+        ...(Array.isArray(directions.backward?.trains) ? directions.backward.trains : [])
+      ]
+    : response?.data?.trains ?? response?.trains ?? response?.data ?? [];
 
   if (!Array.isArray(trains)) {
     return [];

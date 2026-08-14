@@ -1,4 +1,4 @@
-function parseTimeWindow(value) {
+function parseTimeWindow(value, endValue) {
   if (!value || typeof value !== 'string') {
     return null;
   }
@@ -8,7 +8,8 @@ function parseTimeWindow(value) {
     return null;
   }
 
-  const [start, end] = normalized.split('-').map((part) => part.trim());
+  const [start, end] = (endValue ? [normalized, endValue.trim()] : normalized.split('-'))
+    .map((part) => part.trim());
   if (!start || !end) {
     return null;
   }
@@ -20,7 +21,13 @@ function parseTimeWindow(value) {
 }
 
 function parseTime(timestamp) {
-  const date = new Date(timestamp);
+  const text = String(timestamp || '');
+  const explicitDateTime = text.match(/(?:^|T|\s)(\d{2}:\d{2})(?::\d{2})?/);
+  if (explicitDateTime) {
+    return explicitDateTime[1];
+  }
+
+  const date = new Date(text);
   if (Number.isNaN(date.getTime())) {
     return null;
   }
@@ -54,7 +61,10 @@ function getAvailableSeatCount(cars = []) {
 }
 
 function findMatchingTrains(normalizedTrains, request) {
-  const window = parseTimeWindow(request.depart_window_start || '00:00-23:59');
+  const window = parseTimeWindow(
+    request.depart_window_start || '00:00',
+    request.depart_window_end
+  );
   const requestedTypes = Array.isArray(request.train_types)
     ? request.train_types
     : request.train_types

@@ -14,7 +14,7 @@ async function getLastNotificationForRequest(requestId) {
 
   const { data, error } = await client
     .from('notifications')
-    .select('id, message, sent_at')
+    .select('id, message, payload, sent_at')
     .eq('monitoring_request_id', requestId)
     .order('sent_at', { ascending: false })
     .limit(1)
@@ -31,7 +31,7 @@ async function getLastNotificationForRequest(requestId) {
   return data;
 }
 
-async function saveNotification({ requestId, message, notificationType = 'availability_alert', telegramMessageId = null }) {
+async function saveNotification({ requestId, message, payload = null, notificationType = 'availability_alert', telegramMessageId = null }) {
   const client = getSupabaseClient();
   if (!client) {
     logger.warn('supabase.notification', 'Supabase client unavailable, skipping saveNotification');
@@ -42,6 +42,7 @@ async function saveNotification({ requestId, message, notificationType = 'availa
     monitoring_request_id: requestId,
     notification_type: notificationType,
     message,
+    payload,
     telegram_message_id: telegramMessageId,
     sent_at: new Date().toISOString()
   };
@@ -129,6 +130,8 @@ function shouldNotifyForTrainUpdate(request, matchingTrains, lastPayload) {
 module.exports = {
   getLastNotificationForRequest,
   saveNotification,
+  getPendingNotifications,
+  markNotificationDelivered,
   buildNotificationPayload,
   shouldNotify,
   shouldNotifyForTrainUpdate

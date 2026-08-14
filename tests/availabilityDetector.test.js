@@ -58,6 +58,34 @@ describe('Availability detector', () => {
     expect(matches[0].trainNumber).toBe('7200');
   });
 
+  it('filters Railway DD.MM.YYYY departure times by the actual clock time', () => {
+    const trains = [
+      {
+        trainNumber: '766Ф',
+        trainType: 'Afrosiyob',
+        departure: '12.10.2026 07:30',
+        arrival: '12.10.2026 11:39',
+        cars: [{ type: 'Сидячий', availableSeats: 5 }]
+      },
+      {
+        trainNumber: '770Ф',
+        trainType: 'Afrosiyob',
+        departure: '12.10.2026 08:30',
+        arrival: '12.10.2026 12:36',
+        cars: [{ type: 'Сидячий', availableSeats: 5 }]
+      }
+    ];
+
+    const matches = findMatchingTrains(trains, {
+      passengers: 1,
+      train_types: [],
+      depart_window_start: '08:30',
+      depart_window_end: '12:42'
+    });
+
+    expect(matches.map((train) => train.trainNumber)).toEqual(['770Ф']);
+  });
+
   it('should notify when payloads differ', () => {
     const currentPayload = {
       matchingTrains: [{ trainNumber: '7100' }]
