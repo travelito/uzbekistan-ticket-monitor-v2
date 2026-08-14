@@ -132,20 +132,45 @@ async function getActiveMonitoringRequests() {
     return [];
   }
 
-  return Array.isArray(data) ? data.map((req) => {
+  const requests = Array.isArray(data) ? data : [];
+  const stationIds = [
+    ...new Set(
+      requests.flatMap((req) => [req.origin_station_id, req.destination_station_id]).filter(Boolean)
+    )
+  ];
+
+  let stationNamesById = {};
+  if (stationIds.length > 0) {
+    const { data: stations, error: stationsError } = await client
+      .from('stations')
+      .select('id, name')
+      .in('id', stationIds);
+
+    if (stationsError) {
+      logger.error('supabase.monitoring', 'Failed to fetch station names for active requests', {
+        error: stationsError.message
+      });
+    } else {
+      stationNamesById = Object.fromEntries((stations || []).map((station) => [station.id, station.name]));
+    }
+  }
+
+  return requests.map((req) => {
     // Enrich with parsed notes
     const parsed = parseNotes(req.notes);
     return {
       ...req,
       dep_station_code: parsed.depStationCode || null,
       arv_station_code: parsed.arvStationCode || null,
+      dep_station_name: stationNamesById[req.origin_station_id] || null,
+      arv_station_name: stationNamesById[req.destination_station_id] || null,
       user_id: req.user_id || parsed.userId || parsed.chatId || null,
       chat_id: req.chat_id || parsed.chatId || parsed.userId || null,
       train_types: parsed.trainTypes || null,
       depart_window_start: parsed.departWindowStart || null,
       depart_window_end: parsed.departWindowEnd || null
     };
-  }) : [];
+  });
 }
 
 module.exports = {

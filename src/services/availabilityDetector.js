@@ -61,6 +61,26 @@ function isTrainTypeAllowed(trainType, requestedTypes = []) {
   return requestedTypes.some((type) => normalizedTrainType.includes(String(type || '').toLowerCase()));
 }
 
+function normalizeStationName(name) {
+  return String(name || '').trim().toLowerCase();
+}
+
+// The eticket search endpoint can return trains for the wider corridor (e.g. through-trains
+// serving a different physical station in the same city), so origin/destination must be
+// checked explicitly rather than trusting the API's station-code query alone.
+function isRouteMatch(train, request) {
+  const expectedOrigin = normalizeStationName(request.dep_station_name);
+  const expectedDestination = normalizeStationName(request.arv_station_name);
+  if (!expectedOrigin || !expectedDestination) {
+    return true;
+  }
+
+  return (
+    normalizeStationName(train.origin) === expectedOrigin &&
+    normalizeStationName(train.destination) === expectedDestination
+  );
+}
+
 function getAvailableSeatCount(cars = []) {
   return cars.reduce((sum, car) => sum + (Number.isFinite(car.availableSeats) ? car.availableSeats : 0), 0);
 }
@@ -78,6 +98,10 @@ function findMatchingTrains(normalizedTrains, request) {
 
   return normalizedTrains.filter((train) => {
     if (!train) {
+      return false;
+    }
+
+    if (!isRouteMatch(train, request)) {
       return false;
     }
 

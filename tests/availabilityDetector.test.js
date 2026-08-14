@@ -121,6 +121,42 @@ describe('Availability detector', () => {
     expect(matches.map((train) => train.trainNumber)).toEqual(['772Ф']);
   });
 
+  it('excludes through-trains that only share the destination city but not the requested origin/destination stations', () => {
+    // Real data: request 60b5d583 (Самарканд -> Ташкент) incorrectly notified about
+    // 709Ф, a Бухара -> Ташкент Центральный through-train, alongside the correct 767Ф match.
+    const trains = [
+      {
+        trainNumber: '767Ф',
+        trainType: 'Afrosiyob',
+        origin: 'Самарканд',
+        destination: 'Ташкент',
+        departure: '18.08.2026 17:40',
+        arrival: '18.08.2026 20:12',
+        cars: [{ type: 'Сидячий', availableSeats: 43 }]
+      },
+      {
+        trainNumber: '709Ф',
+        trainType: 'Sharq',
+        origin: 'Бухара',
+        destination: 'Ташкент Центральный',
+        departure: '18.08.2026 19:23',
+        arrival: '18.08.2026 23:06',
+        cars: [{ type: 'Сидячий', availableSeats: 95 }]
+      }
+    ];
+
+    const matches = findMatchingTrains(trains, {
+      passengers: 3,
+      train_types: [],
+      depart_window_start: '17:40',
+      depart_window_end: '20:12',
+      dep_station_name: 'Самарканд',
+      arv_station_name: 'Ташкент'
+    });
+
+    expect(matches.map((train) => train.trainNumber)).toEqual(['767Ф']);
+  });
+
   it('should notify when payloads differ', () => {
     const currentPayload = {
       matchingTrains: [{ trainNumber: '7100' }]
