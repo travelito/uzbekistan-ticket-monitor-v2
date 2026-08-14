@@ -65,18 +65,35 @@ function normalizeStationName(name) {
   return String(name || '').trim().toLowerCase();
 }
 
-// The eticket search endpoint can return trains boarding at unrelated stations (wrong corridor
-// entirely), so the boarding station must be checked explicitly. Destination is intentionally
-// NOT required to match exactly: many valid results are through-trains where the requested
-// destination is an intermediate stop, so the train's displayed destination is its further
-// final terminus rather than the passenger's actual alighting station.
-function isRouteMatch(train, request) {
-  const expectedOrigin = normalizeStationName(request.dep_station_name);
-  if (!expectedOrigin) {
+// The destination is often just an intermediate stop for a through-train, so the train's
+// displayed destination is its further final terminus rather than the passenger's actual
+// alighting station - an exact-string mismatch alone must not disqualify a train. The one case
+// that must still be rejected is alighting at a DIFFERENT physically named station within the
+// same city (e.g. "Ташкент" vs "Ташкент Центральный") - those are not interchangeable even
+// though they share a city name prefix.
+function isDestinationCompatible(trainStationName, expectedStationName) {
+  const expected = normalizeStationName(expectedStationName);
+  if (!expected) {
     return true;
   }
 
-  return normalizeStationName(train.origin) === expectedOrigin;
+  const actual = normalizeStationName(trainStationName);
+  if (actual === expected) {
+    return true;
+  }
+
+  const expectedCity = expected.split(' ')[0];
+  const actualCity = actual.split(' ')[0];
+  return actualCity !== expectedCity;
+}
+
+function isRouteMatch(train, request) {
+  const expectedOrigin = normalizeStationName(request.dep_station_name);
+  if (expectedOrigin && normalizeStationName(train.origin) !== expectedOrigin) {
+    return false;
+  }
+
+  return isDestinationCompatible(train.destination, request.arv_station_name);
 }
 
 function getAvailableSeatCount(cars = []) {
