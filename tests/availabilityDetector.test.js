@@ -157,6 +157,44 @@ describe('Availability detector', () => {
     expect(matches.map((train) => train.trainNumber)).toEqual(['767Ф']);
   });
 
+  it('matches through-trains whose destination is a further terminus than the requested stop', () => {
+    // Real data: request aed8625c (Бухара -> Самарканд, 4 passengers, window 10:57-12:41).
+    // Trains 771Ф/711Ф genuinely board at Бухара and stop at Самарканд en route to their
+    // official terminus "Ташкент Центральный" - destination must not be required to match exactly.
+    const trains = [
+      {
+        trainNumber: '751М',
+        trainType: 'Jaloliddin Manguberdi',
+        origin: 'Хива',
+        destination: 'Ташкент',
+        departure: '15.08.2026 10:57',
+        arrival: '15.08.2026 12:41',
+        cars: [{ type: 'Сидячий', availableSeats: 98 }]
+      },
+      {
+        trainNumber: '711Ф',
+        trainType: 'Sharq',
+        origin: 'Бухара',
+        destination: 'Ташкент Центральный',
+        departure: '15.08.2026 05:21',
+        arrival: '15.08.2026 07:38',
+        cars: [{ type: 'Сидячий', availableSeats: 167 }]
+      }
+    ];
+
+    const matches = findMatchingTrains(trains, {
+      passengers: 4,
+      train_types: [],
+      depart_window_start: '00:00',
+      depart_window_end: '23:59',
+      dep_station_name: 'Бухара',
+      arv_station_name: 'Самарканд'
+    });
+
+    // 751М is excluded (boards at Хива, wrong origin); 711Ф matches on origin alone
+    expect(matches.map((train) => train.trainNumber)).toEqual(['711Ф']);
+  });
+
   it('should notify when payloads differ', () => {
     const currentPayload = {
       matchingTrains: [{ trainNumber: '7100' }]

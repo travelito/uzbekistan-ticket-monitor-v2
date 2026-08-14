@@ -65,20 +65,18 @@ function normalizeStationName(name) {
   return String(name || '').trim().toLowerCase();
 }
 
-// The eticket search endpoint can return trains for the wider corridor (e.g. through-trains
-// serving a different physical station in the same city), so origin/destination must be
-// checked explicitly rather than trusting the API's station-code query alone.
+// The eticket search endpoint can return trains boarding at unrelated stations (wrong corridor
+// entirely), so the boarding station must be checked explicitly. Destination is intentionally
+// NOT required to match exactly: many valid results are through-trains where the requested
+// destination is an intermediate stop, so the train's displayed destination is its further
+// final terminus rather than the passenger's actual alighting station.
 function isRouteMatch(train, request) {
   const expectedOrigin = normalizeStationName(request.dep_station_name);
-  const expectedDestination = normalizeStationName(request.arv_station_name);
-  if (!expectedOrigin || !expectedDestination) {
+  if (!expectedOrigin) {
     return true;
   }
 
-  return (
-    normalizeStationName(train.origin) === expectedOrigin &&
-    normalizeStationName(train.destination) === expectedDestination
-  );
+  return normalizeStationName(train.origin) === expectedOrigin;
 }
 
 function getAvailableSeatCount(cars = []) {
