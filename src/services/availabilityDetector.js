@@ -65,25 +65,35 @@ function normalizeStationName(name) {
   return String(name || '').trim().toLowerCase();
 }
 
-// Both origin and destination must match the requested station names exactly. Earlier attempts
-// to relax either side to accommodate through-trains (boarding/alighting at an intermediate stop
-// before the train's listed terminus) proved unsafe: without real per-train stop-sequence data,
-// "a further stop on the same corridor" is indistinguishable from "a completely unrelated
-// direction" (e.g. a Ташкент -> Хива train wrongly matched a Ташкент -> Самарканд request because
-// Хива/Самарканд were treated as two equally-valid "different cities"). A missed notification for
-// a genuine through-ticket is a much safer failure mode than notifying about the wrong route.
+// A train's origin/destination is compatible with a requested station if it's an exact match,
+// OR if it's a same-city sub-station variant (e.g. "Ташкент" vs "Ташкент Центральный" share the
+// "ташкент" prefix) - multi-station cities often only run corridor trains from one specific
+// sub-station. This is intentionally narrower than "any different city is fine": a genuinely
+// different city (e.g. "Хива" vs "Самарканд") never matches, which is what keeps unrelated
+// directions from slipping through.
+function isStationCompatible(trainStationName, expectedStationName) {
+  const expected = normalizeStationName(expectedStationName);
+  if (!expected) {
+    return true;
+  }
+
+  const actual = normalizeStationName(trainStationName);
+  if (actual === expected) {
+    return true;
+  }
+
+  return actual.split(' ')[0] === expected.split(' ')[0];
+}
+
+// Both origin and destination must be compatible with the requested station names (see
+// isStationCompatible). Requiring compatibility on BOTH sides - rather than relaxing one side
+// entirely - is what prevents a same-city-variant train (e.g. a "Ташкент Центральный" departure)
+// from being confused with a train serving a totally unrelated direction.
 function isRouteMatch(train, request) {
-  const expectedOrigin = normalizeStationName(request.dep_station_name);
-  if (expectedOrigin && normalizeStationName(train.origin) !== expectedOrigin) {
-    return false;
-  }
-
-  const expectedDestination = normalizeStationName(request.arv_station_name);
-  if (expectedDestination && normalizeStationName(train.destination) !== expectedDestination) {
-    return false;
-  }
-
-  return true;
+  return (
+    isStationCompatible(train.origin, request.dep_station_name) &&
+    isStationCompatible(train.destination, request.arv_station_name)
+  );
 }
 
 function getAvailableSeatCount(cars = []) {

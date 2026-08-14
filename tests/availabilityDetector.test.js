@@ -231,6 +231,44 @@ describe('Availability detector', () => {
     expect(matches).toHaveLength(0);
   });
 
+  it('matches a train boarding from a same-city sub-station variant when the destination matches exactly', () => {
+    // Real data: requests 9db32e93/7a5e5ca9/028c904b (Ташкент -> Самарканд). Train 768Ф boards
+    // at "Ташкент Центральный" (a sub-station of the requested "Ташкент") and ends exactly at
+    // "Самарканд" - it must count as a match once seats are available (the real 768Ф had 0 seats
+    // at the time of this incident, hence no notification, but the route itself was compatible).
+    const trains = [
+      {
+        trainNumber: '768Ф',
+        trainType: 'Afrosiyob',
+        origin: 'Ташкент Центральный',
+        destination: 'Самарканд',
+        departure: '15.08.2026 07:55',
+        arrival: '15.08.2026 10:10',
+        cars: [{ type: 'Сидячий', availableSeats: 5 }]
+      },
+      {
+        trainNumber: '752Ж',
+        trainType: 'Jaloliddin Manguberdi',
+        origin: 'Ташкент',
+        destination: 'Хива',
+        departure: '15.08.2026 07:00',
+        arrival: '15.08.2026 09:13',
+        cars: [{ type: 'Сидячий', availableSeats: 6 }]
+      }
+    ];
+
+    const matches = findMatchingTrains(trains, {
+      passengers: 3,
+      train_types: [],
+      depart_window_start: '07:00',
+      depart_window_end: '09:13',
+      dep_station_name: 'Ташкент',
+      arv_station_name: 'Самарканд'
+    });
+
+    expect(matches.map((train) => train.trainNumber)).toEqual(['768Ф']);
+  });
+
   it('does not match through-trains ending at a different named station in the same city', () => {
     // Real data: requests d9c4f77a/9e83af4d (Самарканд -> Ташкент, 2026-08-15). Trains 709Ф/777Ф
     // board at Бухара/"Бухара 1" and end at "Ташкент Центральный" - neither the origin nor the
