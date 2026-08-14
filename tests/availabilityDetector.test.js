@@ -157,10 +157,10 @@ describe('Availability detector', () => {
     expect(matches.map((train) => train.trainNumber)).toEqual(['767Ф']);
   });
 
-  it('matches through-trains whose destination is a further terminus than the requested stop', () => {
-    // Real data: request aed8625c (Бухара -> Самарканд, 4 passengers, window 10:57-12:41).
-    // Trains 771Ф/711Ф genuinely board at Бухара and stop at Самарканд en route to their
-    // official terminus "Ташкент Центральный" - destination must not be required to match exactly.
+  it('requires exact origin AND destination match, excluding through-trains ending elsewhere', () => {
+    // Real data: request aed8625c (Бухара -> Самарканд). 711Ф genuinely stops at Самарканд en
+    // route to "Ташкент Центральный", but without real per-train stop data we can't safely tell
+    // that apart from a train serving a totally different destination, so it is excluded.
     const trains = [
       {
         trainNumber: '751М',
@@ -191,15 +191,51 @@ describe('Availability detector', () => {
       arv_station_name: 'Самарканд'
     });
 
-    // 751М is excluded (boards at Хива, wrong origin); 711Ф matches on origin alone
-    expect(matches.map((train) => train.trainNumber)).toEqual(['711Ф']);
+    expect(matches).toHaveLength(0);
+  });
+
+  it('rejects a train serving a completely different destination city (real bug: 752Ж Ташкент -> Хива matched a Ташкент -> Самарканд request)', () => {
+    // Real data: request 028c904b (Ташкент -> Самарканд, window 07:00-09:13). The previous
+    // "relaxed destination" logic treated Хива and Самарканд as two unrelated cities and let
+    // 752Ж through since its origin ("Ташкент") happened to match.
+    const trains = [
+      {
+        trainNumber: '752Ж',
+        trainType: 'Jaloliddin Manguberdi',
+        origin: 'Ташкент',
+        destination: 'Хива',
+        departure: '15.08.2026 07:00',
+        arrival: '15.08.2026 09:13',
+        cars: [{ type: 'Сидячий', availableSeats: 6 }]
+      },
+      {
+        trainNumber: '766Ф',
+        trainType: 'Afrosiyob',
+        origin: 'Ташкент Центральный',
+        destination: 'Бухара',
+        departure: '15.08.2026 07:30',
+        arrival: '15.08.2026 09:43',
+        cars: [{ type: 'Сидячий', availableSeats: 1 }]
+      }
+    ];
+
+    const matches = findMatchingTrains(trains, {
+      passengers: 3,
+      train_types: [],
+      depart_window_start: '07:00',
+      depart_window_end: '09:13',
+      dep_station_name: 'Ташкент',
+      arv_station_name: 'Самарканд'
+    });
+
+    expect(matches).toHaveLength(0);
   });
 
   it('does not match through-trains ending at a different named station in the same city', () => {
     // Real data: requests d9c4f77a/9e83af4d (Самарканд -> Ташкент, 2026-08-15). Trains 709Ф/777Ф
-    // board at Бухара/"Бухара 1" and end at "Ташкент Центральный" - a different physical station
-    // than the requested "Ташкент" - so they must not count as matches even with origin relaxed
-    // destination checking. The only true Самарканд-origin train (767Ф) is sold out (0 seats).
+    // board at Бухара/"Бухара 1" and end at "Ташкент Центральный" - neither the origin nor the
+    // destination match the request, so they are excluded. The only true Самарканд-origin train
+    // (767Ф) is sold out (0 seats).
     const trains = [
       {
         trainNumber: '709Ф',

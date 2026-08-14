@@ -65,35 +65,25 @@ function normalizeStationName(name) {
   return String(name || '').trim().toLowerCase();
 }
 
-// The destination is often just an intermediate stop for a through-train, so the train's
-// displayed destination is its further final terminus rather than the passenger's actual
-// alighting station - an exact-string mismatch alone must not disqualify a train. The one case
-// that must still be rejected is alighting at a DIFFERENT physically named station within the
-// same city (e.g. "Ташкент" vs "Ташкент Центральный") - those are not interchangeable even
-// though they share a city name prefix.
-function isDestinationCompatible(trainStationName, expectedStationName) {
-  const expected = normalizeStationName(expectedStationName);
-  if (!expected) {
-    return true;
-  }
-
-  const actual = normalizeStationName(trainStationName);
-  if (actual === expected) {
-    return true;
-  }
-
-  const expectedCity = expected.split(' ')[0];
-  const actualCity = actual.split(' ')[0];
-  return actualCity !== expectedCity;
-}
-
+// Both origin and destination must match the requested station names exactly. Earlier attempts
+// to relax either side to accommodate through-trains (boarding/alighting at an intermediate stop
+// before the train's listed terminus) proved unsafe: without real per-train stop-sequence data,
+// "a further stop on the same corridor" is indistinguishable from "a completely unrelated
+// direction" (e.g. a Ташкент -> Хива train wrongly matched a Ташкент -> Самарканд request because
+// Хива/Самарканд were treated as two equally-valid "different cities"). A missed notification for
+// a genuine through-ticket is a much safer failure mode than notifying about the wrong route.
 function isRouteMatch(train, request) {
   const expectedOrigin = normalizeStationName(request.dep_station_name);
   if (expectedOrigin && normalizeStationName(train.origin) !== expectedOrigin) {
     return false;
   }
 
-  return isDestinationCompatible(train.destination, request.arv_station_name);
+  const expectedDestination = normalizeStationName(request.arv_station_name);
+  if (expectedDestination && normalizeStationName(train.destination) !== expectedDestination) {
+    return false;
+  }
+
+  return true;
 }
 
 function getAvailableSeatCount(cars = []) {
