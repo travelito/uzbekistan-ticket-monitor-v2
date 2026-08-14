@@ -82,11 +82,12 @@ async function processMonitoringRequest(request) {
 
 function buildMonitoringNotificationMessage(request, matchingTrains) {
   const lines = matchingTrains.map((train) => {
-    const carLines = train.cars.map((car) => `- ${car.type}: ${car.availableSeats}`).join('\n');
-    return `*Поезд ${train.trainNumber} (${train.trainType})*\n${train.origin} → ${train.destination}\nОтправление: ${train.departure}\nПрибытие: ${train.arrival}\n${carLines}`;
+    const carLines = train.cars.map((car) => `💺 ${car.type}: ${car.availableSeats}`).join('\n');
+    return `🚄 *Поезд ${train.trainNumber} (${train.trainType})*\n📍 ${train.origin} → ${train.destination}\n🕐 Отправление: ${train.departure}\n🕐 Прибытие: ${train.arrival}\n${carLines}`;
   });
 
-  return `Найдены доступные билеты для мониторинга *${request.id}*:\n\n${lines.join('\n\n')}`;
+  const shortId = String(request.id).substring(0, 8);
+  return `🎫 Найдены билеты! Мониторинг ${shortId}\n\n${lines.join('\n\n')}`;
 }
 
 async function runWorkerCycle() {
