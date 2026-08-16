@@ -4,7 +4,7 @@ const { getActiveMonitoringRequests } = require('../services/supabaseClient');
 const { processMonitoringRequest } = require('../services/workerService');
 const { refreshSession, startSessionRefresher } = require('../eticket/session');
 
-const DEFAULT_CHECK_INTERVAL_MINUTES = 15;
+const DEFAULT_CHECK_INTERVAL_MINUTES = 7;
 
 function getCheckIntervalMs() {
   const minutes = Number(process.env.CHECK_INTERVAL_MINUTES ?? config.checkIntervalMinutes ?? DEFAULT_CHECK_INTERVAL_MINUTES);
