@@ -158,6 +158,52 @@ function buildNotificationPayload(request, matchingTrains) {
   };
 }
 
+function normalizeCarSnapshot(cars = []) {
+  return (Array.isArray(cars) ? cars : [])
+    .map((car) => ({
+      type: String(car?.type || '').trim().toLowerCase(),
+      availableSeats: Number.isFinite(car?.availableSeats) ? car.availableSeats : 0
+    }))
+    .sort((a, b) => {
+      if (a.type === b.type) {
+        return a.availableSeats - b.availableSeats;
+      }
+      return a.type.localeCompare(b.type);
+    });
+}
+
+function normalizeTrainSnapshot(train) {
+  const departureTime = parseTime(train?.departure) || String(train?.departure || '').trim();
+  const arrivalTime = parseTime(train?.arrival) || String(train?.arrival || '').trim();
+
+  return {
+    trainNumber: normalizeTrainNumber(train?.trainNumber),
+    trainType: String(train?.trainType || '').trim().toLowerCase(),
+    departure: departureTime,
+    arrival: arrivalTime,
+    cars: normalizeCarSnapshot(train?.cars)
+  };
+}
+
+function buildMatchingTrainsSignature(payload) {
+  const matchingTrains = Array.isArray(payload?.matchingTrains) ? payload.matchingTrains : [];
+
+  return matchingTrains
+    .map(normalizeTrainSnapshot)
+    .sort((a, b) => {
+      if (a.trainNumber !== b.trainNumber) {
+        return a.trainNumber.localeCompare(b.trainNumber);
+      }
+      if (a.departure !== b.departure) {
+        return a.departure.localeCompare(b.departure);
+      }
+      if (a.arrival !== b.arrival) {
+        return a.arrival.localeCompare(b.arrival);
+      }
+      return a.trainType.localeCompare(b.trainType);
+    });
+}
+
 function shouldNotify(currentPayload, lastPayload) {
   if (!lastPayload) {
     return true;
@@ -165,12 +211,13 @@ function shouldNotify(currentPayload, lastPayload) {
 
   try {
     const lastJson = typeof lastPayload === 'string' ? JSON.parse(lastPayload) : lastPayload;
-    return JSON.stringify(currentPayload.matchingTrains) !== JSON.stringify(lastJson.matchingTrains);
+    const currentSignature = buildMatchingTrainsSignature(currentPayload);
+    const lastSignature = buildMatchingTrainsSignature(lastJson);
+    return JSON.stringify(currentSignature) !== JSON.stringify(lastSignature);
   } catch (error) {
     return true;
   }
 }
-
 module.exports = {
   findMatchingTrains,
   buildNotificationPayload,
