@@ -307,6 +307,73 @@ describe('Availability detector', () => {
     expect(matches).toHaveLength(0);
   });
 
+  it('matches 17cde3d5 corridor case via train_routes directory when originRoute starts earlier', () => {
+    // Real data: request 17cde3d5 (Бухара -> Хива, 11:14-14:36, 3 passengers). Train 752Ж
+    // appears with originRoute depStationName='Ташкент' even when querying from Бухара, so
+    // strict origin/destination matching misses it; train_routes directory should allow it.
+    const trains = [
+      {
+        trainNumber: '752Ж',
+        trainType: 'Jaloliddin Manguberdi',
+        origin: 'Ташкент',
+        destination: 'Хива',
+        departure: '09.09.2026 11:14',
+        arrival: '09.09.2026 14:36',
+        cars: [{ type: 'Сидячий', availableSeats: 178 }]
+      }
+    ];
+
+    const matches = findMatchingTrains(trains, {
+      passengers: 3,
+      train_types: [],
+      depart_window_start: '11:14',
+      depart_window_end: '14:36',
+      dep_station_name: 'Бухара',
+      arv_station_name: 'Хива',
+      trainRoutesByNumber: {
+        '752Ж': {
+          route_stations: ['Хива', 'Бухара', 'Самарканд', 'Ташкент'],
+          bidirectional: true
+        }
+      }
+    });
+
+    expect(matches.map((train) => train.trainNumber)).toEqual(['752Ж']);
+  });
+
+  it('matches 028c904b via train_routes directory when both stations are on the known route in reverse order', () => {
+    // With curated route data for 752Ж, Ташкент -> Самарканд is a valid reverse segment on the
+    // known route Хива -> Бухара -> Самарканд -> Ташкент.
+    const trains = [
+      {
+        trainNumber: '752Ж',
+        trainType: 'Jaloliddin Manguberdi',
+        origin: 'Ташкент',
+        destination: 'Хива',
+        departure: '15.08.2026 07:00',
+        arrival: '15.08.2026 09:13',
+        cars: [{ type: 'Сидячий', availableSeats: 6 }]
+      }
+    ];
+
+    const matches = findMatchingTrains(trains, {
+      passengers: 3,
+      train_types: [],
+      depart_window_start: '07:00',
+      depart_window_end: '09:13',
+      dep_station_name: 'Ташкент',
+      arv_station_name: 'Самарканд',
+      trainRoutesByNumber: {
+        '752Ж': {
+          route_stations: ['Хива', 'Бухара', 'Самарканд', 'Ташкент'],
+          bidirectional: true
+        }
+      }
+    });
+
+    expect(matches.map((train) => train.trainNumber)).toEqual(['752Ж']);
+  });
+
   it('should notify when payloads differ', () => {
     const currentPayload = {
       matchingTrains: [{ trainNumber: '7100' }]
@@ -321,5 +388,71 @@ describe('Availability detector', () => {
     };
     const lastPayload = JSON.stringify({ matchingTrains: [{ trainNumber: '7100' }] });
     expect(shouldNotify(currentPayload, lastPayload)).toBe(false);
+  });
+
+  it('should not notify when only station labels or array order differ', () => {
+    const currentPayload = {
+      matchingTrains: [
+        {
+          trainNumber: '765Ф',
+          trainType: 'Afrosiyob',
+          origin: 'Ташкент',
+          destination: 'Бухара',
+          departure: '15.08.2026 10:30',
+          arrival: '15.08.2026 14:20',
+          cars: [
+            { type: 'Сидячий', availableSeats: 33 },
+            { type: 'VIP', availableSeats: 2 }
+          ]
+        }
+      ]
+    };
+
+    const lastPayload = JSON.stringify({
+      matchingTrains: [
+        {
+          trainNumber: '765Ф',
+          trainType: 'Afrosiyob',
+          origin: 'Ташкент Центральный',
+          destination: 'Бухара 1',
+          departure: '2026-08-15T10:30:00',
+          arrival: '2026-08-15T14:20:00',
+          cars: [
+            { type: 'VIP', availableSeats: 2 },
+            { type: 'Сидячий', availableSeats: 33 }
+          ]
+        }
+      ]
+    });
+
+    expect(shouldNotify(currentPayload, lastPayload)).toBe(false);
+  });
+
+  it('should notify when seats change for the same train', () => {
+    const currentPayload = {
+      matchingTrains: [
+        {
+          trainNumber: '765Ф',
+          trainType: 'Afrosiyob',
+          departure: '15.08.2026 10:30',
+          arrival: '15.08.2026 14:20',
+          cars: [{ type: 'Сидячий', availableSeats: 34 }]
+        }
+      ]
+    };
+
+    const lastPayload = JSON.stringify({
+      matchingTrains: [
+        {
+          trainNumber: '765Ф',
+          trainType: 'Afrosiyob',
+          departure: '15.08.2026 10:30',
+          arrival: '15.08.2026 14:20',
+          cars: [{ type: 'Сидячий', availableSeats: 33 }]
+        }
+      ]
+    });
+
+    expect(shouldNotify(currentPayload, lastPayload)).toBe(true);
   });
 });

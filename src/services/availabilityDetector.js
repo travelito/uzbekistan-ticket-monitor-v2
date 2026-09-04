@@ -1,25 +1,3 @@
-function parseTimeWindow(value, endValue) {
-  if (!value || typeof value !== 'string') {
-    return null;
-  }
-
-  const normalized = value.trim();
-  if (normalized === 'any' || normalized === '00:00-23:59') {
-    return null;
-  }
-
-  const [start, end] = (endValue ? [normalized, endValue.trim()] : normalized.split('-'))
-    .map((part) => part.trim());
-  if (!start || !end) {
-    return null;
-  }
-
-  return {
-    start,
-    end
-  };
-}
-
 function parseTime(timestamp) {
   const text = String(timestamp || '');
   const explicitDateTime = text.match(/(?:^|T|\s)(\d{2}:\d{2})(?::\d{2})?/);
@@ -34,97 +12,68 @@ function parseTime(timestamp) {
   return date.toISOString().substr(11, 5);
 }
 
-function isWithinWindow(timestamp, window) {
-  if (!window || !window.start || !window.end) {
-    return true;
-  }
-
-  const time = parseTime(timestamp);
-  if (!time) {
-    return false;
-  }
-
-  // Window crosses midnight (e.g. 22:23-00:01) when start is after end
-  if (window.start > window.end) {
-    return time >= window.start || time <= window.end;
-  }
-
-  return time >= window.start && time <= window.end;
-}
-
-function isTrainTypeAllowed(trainType, requestedTypes = []) {
-  if (!requestedTypes || requestedTypes.length === 0) {
-    return true;
-  }
-
-  const normalizedTrainType = String(trainType || '').toLowerCase();
-  return requestedTypes.some((type) => normalizedTrainType.includes(String(type || '').toLowerCase()));
-}
-
-function normalizeStationName(name) {
-  return String(name || '').trim().toLowerCase();
-}
-
-// A train's origin/destination is compatible with a requested station if it's an exact match,
-// OR if it's a same-city sub-station variant (e.g. "Ташкент" vs "Ташкент Центральный" share the
-// "ташкент" prefix) - multi-station cities often only run corridor trains from one specific
-// sub-station. This is intentionally narrower than "any different city is fine": a genuinely
-// different city (e.g. "Хива" vs "Самарканд") never matches, which is what keeps unrelated
-// directions from slipping through.
-function isStationCompatible(trainStationName, expectedStationName) {
-  const expected = normalizeStationName(expectedStationName);
-  if (!expected) {
-    return true;
-  }
-
-  const actual = normalizeStationName(trainStationName);
-  if (actual === expected) {
-    return true;
-  }
-
-  return actual.split(' ')[0] === expected.split(' ')[0];
-}
-
-// Both origin and destination must be compatible with the requested station names (see
-// isStationCompatible). Requiring compatibility on BOTH sides - rather than relaxing one side
-// entirely - is what prevents a same-city-variant train (e.g. a "Ташкент Центральный" departure)
-// from being confused with a train serving a totally unrelated direction.
-function isRouteMatch(train, request) {
-  return (
-    isStationCompatible(train.origin, request.dep_station_name) &&
-    isStationCompatible(train.destination, request.arv_station_name)
-  );
-}
-
 function getAvailableSeatCount(cars = []) {
   return cars.reduce((sum, car) => sum + (Number.isFinite(car.availableSeats) ? car.availableSeats : 0), 0);
 }
 
+function normalizeTrainNumber(value) {
+  return String(value || '').trim().toUpperCase();
+}
+
+// Exact-match mode: a train qualifies only if its departure AND arrival time (HH:mm, taken
+// literally from the live API response) equal the ones the user picked when creating the
+// request. Station names/brands are never hardcoded here - they only ever come from the live
+// train list. The train number is intentionally NOT part of the match - it is stored only as a
+// secondary confirmation field (see request.train_number) since railway.uz occasionally reuses
+// times across schedule revisions.
+function isAllowedBrand(trainType, allowedBrands) {
+  const normalized = String(trainType || '').trim().toLowerCase();
+  const validBrands = Array.isArray(allowedBrands) && allowedBrands.length > 0
+    ? allowedBrands.map((brand) => String(brand || '').trim().toLowerCase())
+    : ['afrosiyob', 'rotem'];
+
+  if (!normalized) {
+    return false;
+  }
+
+  return validBrands.some((brand) => {
+    if (!brand) {
+      return false;
+    }
+
+    if (normalized.includes(brand)) {
+      return true;
+    }
+
+    if (brand === 'rotem' && (normalized.includes('jaloliddin') || normalized.includes('manguberdi'))) {
+      return true;
+    }
+
+    return false;
+  });
+}
+
 function findMatchingTrains(normalizedTrains, request) {
-  const window = parseTimeWindow(
-    request.depart_window_start || '00:00',
-    request.depart_window_end
-  );
-  const requestedTypes = Array.isArray(request.train_types)
-    ? request.train_types
-    : request.train_types
-    ? String(request.train_types).split(',').map((value) => value.trim())
-    : [];
+  const exactDeparture = String(request.exact_departure || request.exact_departure_time || '').trim();
+  const exactArrival = String(request.exact_arrival || '').trim();
+  if (!exactDeparture || !exactArrival) {
+    return [];
+  }
+
+  const allowedBrands = Array.isArray(request.allowed_brands) && request.allowed_brands.length > 0
+    ? request.allowed_brands
+    : ['Afrosiyob', 'Rotem'];
 
   return normalizedTrains.filter((train) => {
     if (!train) {
       return false;
     }
 
-    if (!isRouteMatch(train, request)) {
+    if (parseTime(train.departure) !== exactDeparture || parseTime(train.arrival) !== exactArrival) {
       return false;
     }
 
-    if (!isTrainTypeAllowed(train.trainType, requestedTypes)) {
-      return false;
-    }
-
-    if (!isWithinWindow(train.departure, window)) {
+    if (!isAllowedBrand(train.trainType, allowedBrands)) {
       return false;
     }
 
@@ -142,9 +91,9 @@ function buildNotificationPayload(request, matchingTrains) {
       arvStationCode: request.arv_station_code,
       travelDate: request.travel_date,
       passengers: request.passengers,
-      trainTypes: request.train_types,
-      departWindowStart: request.depart_window_start,
-      departWindowEnd: request.depart_window_end
+      exactDeparture: request.exact_departure,
+      exactArrival: request.exact_arrival,
+      trainNumber: request.train_number
     },
     matchingTrains: matchingTrains.map((train) => ({
       trainNumber: train.trainNumber,
@@ -221,5 +170,6 @@ function shouldNotify(currentPayload, lastPayload) {
 module.exports = {
   findMatchingTrains,
   buildNotificationPayload,
+  buildMatchingTrainsSignature,
   shouldNotify
 };

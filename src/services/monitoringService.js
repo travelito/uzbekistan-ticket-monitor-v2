@@ -4,6 +4,7 @@ const {
   getActiveMonitoringRequests,
   getMonitoringRequestById,
   findStationById,
+  listStations,
   cancelMonitoringRequest
 } = require('../supabase/monitoringService');
 const { saveAvailabilityCheck } = require('../supabase/availabilityService');
@@ -15,5 +16,6 @@ module.exports = {
   getActiveMonitoringRequests,
   getMonitoringRequestById,
   findStationById,
+  listStations,
   cancelMonitoringRequest
 };
