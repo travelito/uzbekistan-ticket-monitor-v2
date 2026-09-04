@@ -9,16 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jamaster21/uzbekistan-ticket-monitor.git"
+    "url": "git+https://github.com/travelito/uzbekistan-ticket-monitor-v2.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/Jamaster21/uzbekistan-ticket-monitor/issues"
+    "url": "https://github.com/travelito/uzbekistan-ticket-monitor-v2/issues"
   },
-  "homepage": "https://github.com/Jamaster21/uzbekistan-ticket-monitor#readme",
+  "homepage": "https://github.com/travelito/uzbekistan-ticket-monitor-v2#readme",
   "dependencies": {
     "@supabase/supabase-js": "^2.112.2",
     "dotenv": "^17.4.2"
