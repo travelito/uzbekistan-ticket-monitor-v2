@@ -1,0 +1,3100 @@
+﻿{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:27.051Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Received train list response\",\"trainCount\":10}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:27.052114695Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:27.585Z\",\"level\":\"info\",\"operation\":\"supabase.availability\",\"message\":\"Saved availability check\",\"availabilityCheckId\":\"9ead3881-07e3-4073-a388-afc580502211\",\"requestId\":\"53ba4cb2-bdd6-4eb5-8332-3fbb8dd8e3da\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:27.585531206Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:27.585Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"No matching trains found for request\",\"requestId\":\"53ba4cb2-bdd6-4eb5-8332-3fbb8dd8e3da\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:27.585540506Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:27.585Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"Processing monitoring request with eticket client\",\"requestId\":\"e3924500-176d-4869-92ee-4a5133e1324c\",\"searchParams\":{\"date\":\"2026-09-22\",\"depStationCode\":\"2900000\",\"arvStationCode\":\"2900800\"}}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:27.585541906Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:27.585Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Sending train list request\",\"date\":\"2026-09-22\",\"depStationCode\":\"2900000\",\"arvStationCode\":\"2900800\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:27.585542646Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:27.709Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Received train list response\",\"trainCount\":10}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:27.709778261Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:28.372Z\",\"level\":\"info\",\"operation\":\"supabase.availability\",\"message\":\"Saved availability check\",\"availabilityCheckId\":\"65591e7c-28bb-4a31-8814-53aa3bdc5662\",\"requestId\":\"e3924500-176d-4869-92ee-4a5133e1324c\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:28.373094903Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:28.372Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"No matching trains found for request\",\"requestId\":\"e3924500-176d-4869-92ee-4a5133e1324c\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:28.373104563Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:28.372Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"Processing monitoring request with eticket client\",\"requestId\":\"a572840f-a159-460c-a486-d155b83836f3\",\"searchParams\":{\"date\":\"2026-09-23\",\"depStationCode\":\"2900800\",\"arvStationCode\":\"2900700\"}}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:28.373105843Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:28.372Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Sending train list request\",\"date\":\"2026-09-23\",\"depStationCode\":\"2900800\",\"arvStationCode\":\"2900700\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:28.373106703Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:29.114Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Received train list response\",\"trainCount\":10}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:29.115043401Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:29.656Z\",\"level\":\"info\",\"operation\":\"supabase.availability\",\"message\":\"Saved availability check\",\"availabilityCheckId\":\"9734d234-f4e6-4348-bcf9-e6ea7a7d5da3\",\"requestId\":\"a572840f-a159-460c-a486-d155b83836f3\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:29.656872948Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:29.656Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"No matching trains found for request\",\"requestId\":\"a572840f-a159-460c-a486-d155b83836f3\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:29.656882498Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:29.656Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"Processing monitoring request with eticket client\",\"requestId\":\"9ca714b5-03b8-4e21-8f6a-50bdbb7994b1\",\"searchParams\":{\"date\":\"2026-09-23\",\"depStationCode\":\"2900800\",\"arvStationCode\":\"2900700\"}}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:29.656883688Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:29.656Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Sending train list request\",\"date\":\"2026-09-23\",\"depStationCode\":\"2900800\",\"arvStationCode\":\"2900700\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:29.656884768Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:29.782Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Received train list response\",\"trainCount\":10}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:29.782848502Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:30.317Z\",\"level\":\"info\",\"operation\":\"supabase.availability\",\"message\":\"Saved availability check\",\"availabilityCheckId\":\"feaeb46a-2cce-42c0-8e25-0c2cdf1e7b6c\",\"requestId\":\"9ca714b5-03b8-4e21-8f6a-50bdbb7994b1\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:30.317923372Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:30.317Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"No matching trains found for request\",\"requestId\":\"9ca714b5-03b8-4e21-8f6a-50bdbb7994b1\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:30.317999492Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:30.318Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"Processing monitoring request with eticket client\",\"requestId\":\"5c8b795f-d38f-493d-a27d-637cb09bdf00\",\"searchParams\":{\"date\":\"2026-09-17\",\"depStationCode\":\"2900700\",\"arvStationCode\":\"2900000\"}}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:30.318406942Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:30.318Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Sending train list request\",\"date\":\"2026-09-17\",\"depStationCode\":\"2900700\",\"arvStationCode\":\"2900000\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:30.318410962Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:30.922Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Received train list response\",\"trainCount\":16}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:30.923053901Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:31.461Z\",\"level\":\"info\",\"operation\":\"supabase.availability\",\"message\":\"Saved availability check\",\"availabilityCheckId\":\"1f45dc65-bcef-4814-a3b0-7235a6b03944\",\"requestId\":\"5c8b795f-d38f-493d-a27d-637cb09bdf00\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:31.46173706Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:31.461Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"No matching trains found for request\",\"requestId\":\"5c8b795f-d38f-493d-a27d-637cb09bdf00\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:31.46174675Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:31.461Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"Processing monitoring request with eticket client\",\"requestId\":\"51b1677e-9488-4700-a4a1-87774d3a49f2\",\"searchParams\":{\"date\":\"2026-09-17\",\"depStationCode\":\"2900700\",\"arvStationCode\":\"2900000\"}}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:31.46174822Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:31.461Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Sending train list request\",\"date\":\"2026-09-17\",\"depStationCode\":\"2900700\",\"arvStationCode\":\"2900000\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:31.46174925Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:31.600Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Received train list response\",\"trainCount\":16}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:31.600533468Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:32.161Z\",\"level\":\"info\",\"operation\":\"supabase.availability\",\"message\":\"Saved availability check\",\"availabilityCheckId\":\"b7a4f02c-510a-41f1-ae2d-2527d5d9529f\",\"requestId\":\"51b1677e-9488-4700-a4a1-87774d3a49f2\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:32.161718956Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:32.161Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"No matching trains found for request\",\"requestId\":\"51b1677e-9488-4700-a4a1-87774d3a49f2\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:32.162171096Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:32.161Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"Processing monitoring request with eticket client\",\"requestId\":\"c3580be4-8f43-43a9-b264-6b0fc2ec3c68\",\"searchParams\":{\"date\":\"2026-09-17\",\"depStationCode\":\"2900700\",\"arvStationCode\":\"2900000\"}}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:32.162175536Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:32.161Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Sending train list request\",\"date\":\"2026-09-17\",\"depStationCode\":\"2900700\",\"arvStationCode\":\"2900000\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:32.162176836Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:32.311Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Received train list response\",\"trainCount\":16}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:32.311665099Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:32.853Z\",\"level\":\"info\",\"operation\":\"supabase.availability\",\"message\":\"Saved availability check\",\"availabilityCheckId\":\"76ea943d-dce9-4bc4-b572-1fd6229f21e1\",\"requestId\":\"c3580be4-8f43-43a9-b264-6b0fc2ec3c68\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:32.853305247Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:32.853Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"No matching trains found for request\",\"requestId\":\"c3580be4-8f43-43a9-b264-6b0fc2ec3c68\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:32.853386967Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:32.853Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"Processing monitoring request with eticket client\",\"requestId\":\"97a8e2bc-8e08-4548-b6fa-be6a9acabca3\",\"searchParams\":{\"date\":\"2026-09-09\",\"depStationCode\":\"2900000\",\"arvStationCode\":\"2900700\"}}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:32.853481697Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:32.853Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Sending train list request\",\"date\":\"2026-09-09\",\"depStationCode\":\"2900000\",\"arvStationCode\":\"2900700\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:32.853596357Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:33.434Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Received train list response\",\"trainCount\":17}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:33.434884516Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:33.969Z\",\"level\":\"info\",\"operation\":\"supabase.availability\",\"message\":\"Saved availability check\",\"availabilityCheckId\":\"b3e5bd22-7b23-4bff-9653-50586d671703\",\"requestId\":\"97a8e2bc-8e08-4548-b6fa-be6a9acabca3\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:33.970284706Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:33.969Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"No matching trains found for request\",\"requestId\":\"97a8e2bc-8e08-4548-b6fa-be6a9acabca3\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:33.970292236Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:33.969Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"Processing monitoring request with eticket client\",\"requestId\":\"754465a1-5376-4afa-b4c4-6ec4ae91dd04\",\"searchParams\":{\"date\":\"2026-09-09\",\"depStationCode\":\"2900000\",\"arvStationCode\":\"2900700\"}}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:33.970293606Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:33.969Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Sending train list request\",\"date\":\"2026-09-09\",\"depStationCode\":\"2900000\",\"arvStationCode\":\"2900700\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:33.970294416Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:34.114Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Received train list response\",\"trainCount\":17}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:34.114218402Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:34.671Z\",\"level\":\"info\",\"operation\":\"supabase.availability\",\"message\":\"Saved availability check\",\"availabilityCheckId\":\"96571a0a-c0d2-4ac3-ac6e-f0e60021dbdb\",\"requestId\":\"754465a1-5376-4afa-b4c4-6ec4ae91dd04\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:34.671601242Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:34.671Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"No matching trains found for request\",\"requestId\":\"754465a1-5376-4afa-b4c4-6ec4ae91dd04\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:34.671684802Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:34.671Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"Processing monitoring request with eticket client\",\"requestId\":\"51c8c8b3-2b17-4829-8971-5e3c4869e6c7\",\"searchParams\":{\"date\":\"2026-09-09\",\"depStationCode\":\"2900700\",\"arvStationCode\":\"2900700\"}}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:34.671775462Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:34.671Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Sending train list request\",\"date\":\"2026-09-09\",\"depStationCode\":\"2900700\",\"arvStationCode\":\"2900700\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:34.671904302Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:35.242Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Received train list response\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:35.243252996Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:35.504Z\",\"level\":\"info\",\"operation\":\"supabase.availability\",\"message\":\"Saved availability check\",\"availabilityCheckId\":\"e290a55e-1a13-413c-87e5-edb77b19cf1f\",\"requestId\":\"51c8c8b3-2b17-4829-8971-5e3c4869e6c7\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:35.504507939Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:35.504Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"No matching trains found for request\",\"requestId\":\"51c8c8b3-2b17-4829-8971-5e3c4869e6c7\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:35.504579569Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:35.504Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"Processing monitoring request with eticket client\",\"requestId\":\"ecb915b0-0c93-4b93-9425-09fbef2487f7\",\"searchParams\":{\"date\":\"2026-09-09\",\"depStationCode\":\"2900000\",\"arvStationCode\":\"2900700\"}}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:35.504963899Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:35.504Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Sending train list request\",\"date\":\"2026-09-09\",\"depStationCode\":\"2900000\",\"arvStationCode\":\"2900700\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:35.504975399Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:35.648Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Received train list response\",\"trainCount\":17}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:35.649062245Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:36.194Z\",\"level\":\"info\",\"operation\":\"supabase.availability\",\"message\":\"Saved availability check\",\"availabilityCheckId\":\"c3da0fab-acaa-47b4-b0ab-c234b57e5f5f\",\"requestId\":\"ecb915b0-0c93-4b93-9425-09fbef2487f7\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:36.1953961Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:36.194Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"No matching trains found for request\",\"requestId\":\"ecb915b0-0c93-4b93-9425-09fbef2487f7\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:36.19540334Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:36.194Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"Processing monitoring request with eticket client\",\"requestId\":\"21e64ae8-f829-46d9-a939-083f3e4a05b5\",\"searchParams\":{\"date\":\"2026-09-29\",\"depStationCode\":\"2900700\",\"arvStationCode\":\"2900800\"}}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:36.19540501Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:36.194Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Sending train list request\",\"date\":\"2026-09-29\",\"depStationCode\":\"2900700\",\"arvStationCode\":\"2900800\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:36.19540572Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:36.656Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Received train list response\",\"trainCount\":10}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:36.657285753Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:37.202Z\",\"level\":\"info\",\"operation\":\"supabase.availability\",\"message\":\"Saved availability check\",\"availabilityCheckId\":\"d025ef2c-52c0-4995-8c21-251e9d9c7b13\",\"requestId\":\"21e64ae8-f829-46d9-a939-083f3e4a05b5\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:37.202792689Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:37.202Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"No matching trains found for request\",\"requestId\":\"21e64ae8-f829-46d9-a939-083f3e4a05b5\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:37.202799399Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:37.202Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"Processing monitoring request with eticket client\",\"requestId\":\"05a36bb6-9ff1-4e60-a74b-cc0c76e187ca\",\"searchParams\":{\"date\":\"2026-09-29\",\"depStationCode\":\"2900700\",\"arvStationCode\":\"2900800\"}}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:37.202800839Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:37.202Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Sending train list request\",\"date\":\"2026-09-29\",\"depStationCode\":\"2900700\",\"arvStationCode\":\"2900800\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:37.202801409Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:37.539Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Received train list response\",\"trainCount\":10}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:37.539519078Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:38.068Z\",\"level\":\"info\",\"operation\":\"supabase.availability\",\"message\":\"Saved availability check\",\"availabilityCheckId\":\"bad5e1d7-2ee6-4121-8180-410f67a50c42\",\"requestId\":\"05a36bb6-9ff1-4e60-a74b-cc0c76e187ca\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:38.068505981Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:38.068Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"No matching trains found for request\",\"requestId\":\"05a36bb6-9ff1-4e60-a74b-cc0c76e187ca\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:38.068516851Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:38.068Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"Processing monitoring request with eticket client\",\"requestId\":\"7d07a50c-4e11-49b2-b416-b5ed31d0e5d9\",\"searchParams\":{\"date\":\"2026-09-29\",\"depStationCode\":\"2900700\",\"arvStationCode\":\"2900800\"}}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:38.068518271Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:38.068Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Sending train list request\",\"date\":\"2026-09-29\",\"depStationCode\":\"2900700\",\"arvStationCode\":\"2900800\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:38.068518871Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:38.215Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Received train list response\",\"trainCount\":10}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:38.215365956Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:38.745Z\",\"level\":\"info\",\"operation\":\"supabase.availability\",\"message\":\"Saved availability check\",\"availabilityCheckId\":\"10aa432e-293a-4eec-8435-046452b1390f\",\"requestId\":\"7d07a50c-4e11-49b2-b416-b5ed31d0e5d9\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:38.745593148Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:38.745Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"No matching trains found for request\",\"requestId\":\"7d07a50c-4e11-49b2-b416-b5ed31d0e5d9\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:38.745601168Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:38.745Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"Processing monitoring request with eticket client\",\"requestId\":\"4fe6b861-d633-4e9c-9af6-94ce4fe1971c\",\"searchParams\":{\"date\":\"2026-10-01\",\"depStationCode\":\"2900800\",\"arvStationCode\":\"2900700\"}}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:38.745602488Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:38.745Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Sending train list request\",\"date\":\"2026-10-01\",\"depStationCode\":\"2900800\",\"arvStationCode\":\"2900700\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:38.745603198Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:39.214Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Received train list response\",\"trainCount\":11}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:39.215277198Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:39.758Z\",\"level\":\"info\",\"operation\":\"supabase.availability\",\"message\":\"Saved availability check\",\"availabilityCheckId\":\"1dbb6657-c1e2-47b1-bc35-c3a3a32fbb7a\",\"requestId\":\"4fe6b861-d633-4e9c-9af6-94ce4fe1971c\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:39.758268605Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:39.758Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"No matching trains found for request\",\"requestId\":\"4fe6b861-d633-4e9c-9af6-94ce4fe1971c\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:39.758648334Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:39.758Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"Processing monitoring request with eticket client\",\"requestId\":\"274ed389-7137-4801-9d9c-67a24346de41\",\"searchParams\":{\"date\":\"2026-10-01\",\"depStationCode\":\"2900800\",\"arvStationCode\":\"2900700\"}}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:39.758653734Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:39.758Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Sending train list request\",\"date\":\"2026-10-01\",\"depStationCode\":\"2900800\",\"arvStationCode\":\"2900700\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:39.758655134Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:39.886Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Received train list response\",\"trainCount\":11}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:39.886236687Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:40.420Z\",\"level\":\"info\",\"operation\":\"supabase.availability\",\"message\":\"Saved availability check\",\"availabilityCheckId\":\"0d4d1c23-1aaa-4777-a098-42e2c23e3272\",\"requestId\":\"274ed389-7137-4801-9d9c-67a24346de41\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:40.420605718Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:40.420Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"No matching trains found for request\",\"requestId\":\"274ed389-7137-4801-9d9c-67a24346de41\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:40.421006198Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:40.420Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"Processing monitoring request with eticket client\",\"requestId\":\"776f4852-fa75-4338-9a2a-d9a84f73e799\",\"searchParams\":{\"date\":\"2026-10-01\",\"depStationCode\":\"2900800\",\"arvStationCode\":\"2900700\"}}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:40.421011648Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:40.420Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Sending train list request\",\"date\":\"2026-10-01\",\"depStationCode\":\"2900800\",\"arvStationCode\":\"2900700\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:40.421012938Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:40.546Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Received train list response\",\"trainCount\":11}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:40.546543792Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:41.074Z\",\"level\":\"info\",\"operation\":\"supabase.availability\",\"message\":\"Saved availability check\",\"availabilityCheckId\":\"882d07a4-8997-4c72-8121-6c6bc9e27c48\",\"requestId\":\"776f4852-fa75-4338-9a2a-d9a84f73e799\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:41.075041735Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:41.074Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"No matching trains found for request\",\"requestId\":\"776f4852-fa75-4338-9a2a-d9a84f73e799\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:41.075050055Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:41.074Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"Processing monitoring request with eticket client\",\"requestId\":\"2c5bf42c-7842-45e8-8629-e15808633f2e\",\"searchParams\":{\"date\":\"2026-10-17\",\"depStationCode\":\"2900800\",\"arvStationCode\":\"2900700\"}}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:41.075051625Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:41.074Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Sending train list request\",\"date\":\"2026-10-17\",\"depStationCode\":\"2900800\",\"arvStationCode\":\"2900700\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:41.075052435Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:41.563Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Received train list response\",\"trainCount\":11}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:41.564175676Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:42.112Z\",\"level\":\"info\",\"operation\":\"supabase.availability\",\"message\":\"Saved availability check\",\"availabilityCheckId\":\"cc5c4c52-f5b7-400a-bfec-bc3aa41f7ec7\",\"requestId\":\"2c5bf42c-7842-45e8-8629-e15808633f2e\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:42.112561341Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:42.112Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"No matching trains found for request\",\"requestId\":\"2c5bf42c-7842-45e8-8629-e15808633f2e\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:42.112568731Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:42.112Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"Processing monitoring request with eticket client\",\"requestId\":\"86fdffac-b107-401b-a078-01843bfe0c10\",\"searchParams\":{\"date\":\"2026-10-17\",\"depStationCode\":\"2900800\",\"arvStationCode\":\"2900700\"}}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:42.112570201Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:42.112Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Sending train list request\",\"date\":\"2026-10-17\",\"depStationCode\":\"2900800\",\"arvStationCode\":\"2900700\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:42.112571021Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:42.245Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Received train list response\",\"trainCount\":11}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:42.245586581Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:42.784Z\",\"level\":\"info\",\"operation\":\"supabase.availability\",\"message\":\"Saved availability check\",\"availabilityCheckId\":\"35d51f3e-04e8-4adc-b7b8-beed8e15394c\",\"requestId\":\"86fdffac-b107-401b-a078-01843bfe0c10\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:42.78483398Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:42.784Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"No matching trains found for request\",\"requestId\":\"86fdffac-b107-401b-a078-01843bfe0c10\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:42.7848411Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:42.784Z\",\"level\":\"info\",\"operation\":\"worker.request\",\"message\":\"Processing monitoring request with eticket client\",\"requestId\":\"12a49eba-d4f3-4da1-bddf-6035d3799b4d\",\"searchParams\":{\"date\":\"2026-10-18\",\"depStationCode\":\"2900800\",\"arvStationCode\":\"2900700\"}}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:42.78484238Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:42.784Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Sending train list request\",\"date\":\"2026-10-18\",\"depStationCode\":\"2900800\",\"arvStationCode\":\"2900700\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:42.7848432Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:43.250Z\",\"level\":\"info\",\"operation\":\"eticket.client\",\"message\":\"Received train list response\",\"trainCount\":10}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:43.250772251Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:43.793Z\",\"level\":\"info\",\"operation\":\"supabase.availability\",\"message\":\"Saved availability check\",\"availabilityCheckId\":\"9aed4bfd-bb40-40d4-9bf7-de8ca8b2ab5c\",\"requestId\":\"12a49eba-d4f3-4da1-bddf-6035d3799b4d\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:43.793547848Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:44.053Z\",\"level\":\"info\",\"operation\":\"telegram.send\",\"message\":\"Sending message to Telegram chat\",\"chatId\":\"92819144\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:44.054697411Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:55:44.545Z\",\"level\":\"info\",\"operation\":\"supabase.notification\",\"message\":\"Saved notification record\",\"notificationId\":\"62f365b1-8561-4afe-8b24-650e1bc2359f\",\"requestId\":\"12a49eba-d4f3-4da1-bddf-6035d3799b4d\"}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:55:44.545585942Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}
+{
+    "level": "info",
+    "instance": "7811d494b5d578",
+    "message": "{\"timestamp\":\"2026-08-24T15:56:13.408Z\",\"level\":\"info\",\"operation\":\"supabase.monitoring\",\"message\":\"Comparing monitoring request owner for cancellation\",\"shortId\":\"12a49eba-d4f3-4da1-bddf-6035d3799b4d\",\"requestId\":\"12a49eba-d4f3-4da1-bddf-6035d3799b4d\",\"callerChatId\":\"92819144\",\"requestChatId\":\"92819144\",\"ownerMatches\":true}",
+    "region": "ams",
+    "timestamp": "2026-08-24T15:56:13.409025621Z",
+    "meta": {
+        "Instance": "7811d494b5d578",
+        "Region": "ams",
+        "Event": {
+            "Provider": "app"
+        },
+        "HTTP": {
+            "Request": {
+                "ID": "",
+                "Method": "",
+                "Version": ""
+            },
+            "Response": {
+                "status_code": 0
+            }
+        },
+        "Error": {
+            "Code": 0,
+            "Message": ""
+        },
+        "URL": {
+            "Full": ""
+        }
+    }
+}

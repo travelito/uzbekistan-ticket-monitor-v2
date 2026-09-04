@@ -23,6 +23,27 @@ async function findStationsByTerm(term) {
   return Array.isArray(data) ? data : [];
 }
 
+async function listStations() {
+  const client = getSupabaseClient();
+  if (!client) {
+    logger.warn('supabase.monitoring', 'Supabase client unavailable, cannot list stations');
+    return [];
+  }
+
+  const { data, error } = await client
+    .from('stations')
+    .select('id, code, name')
+    .order('name')
+    .limit(100);
+
+  if (error) {
+    logger.error('supabase.monitoring', 'Failed to list stations', { error: error.message });
+    return [];
+  }
+
+  return Array.isArray(data) ? data : [];
+}
+
 async function findStationById(id) {
   const client = getSupabaseClient();
   if (!client) {
@@ -58,19 +79,44 @@ function parseNotes(notes) {
 
 function enrichMonitoringRequest(request) {
   const parsed = parseNotes(request.notes);
+  const allowedBrands = Array.isArray(request.allowed_brands)
+    ? request.allowed_brands
+    : Array.isArray(parsed.allowedBrands)
+      ? parsed.allowedBrands
+      : null;
+
   return {
     ...request,
     user_id: request.user_id || parsed.userId || parsed.chatId || null,
     chat_id: request.chat_id || parsed.chatId || parsed.userId || null,
     dep_station_code: parsed.depStationCode || null,
     arv_station_code: parsed.arvStationCode || null,
-    train_types: parsed.trainTypes || null,
-    depart_window_start: parsed.departWindowStart || null,
-    depart_window_end: parsed.departWindowEnd || null
+    exact_departure: request.exact_departure_time || parsed.exactDeparture || null,
+    exact_arrival: parsed.exactArrival || null,
+    exact_departure_time: request.exact_departure_time || parsed.exactDepartureTime || parsed.exactDeparture || null,
+    selected_train_number: request.selected_train_number || parsed.selectedTrainNumber || parsed.trainNumber || null,
+    train_number: request.selected_train_number || parsed.selectedTrainNumber || parsed.trainNumber || null,
+    allowed_brands: allowedBrands,
+    api_origin_station_name: parsed.apiOriginStationName || null,
+    api_destination_station_name: parsed.apiDestinationStationName || null
   };
 }
 
-async function createMonitoringRequest({ userId, originStationId, destinationStationId, date, passengers, trainTypes, departWindowStart, departWindowEnd }) {
+async function createMonitoringRequest({
+  userId,
+  originStationId,
+  destinationStationId,
+  date,
+  passengers,
+  exactDeparture,
+  exactArrival,
+  exactDepartureTime,
+  trainNumber,
+  selectedTrainNumber,
+  allowedBrands,
+  apiOriginStationName,
+  apiDestinationStationName
+}) {
   const client = getSupabaseClient();
   if (!client) {
     logger.warn('supabase.monitoring', 'Supabase client unavailable, skipping createMonitoringRequest');
@@ -90,6 +136,9 @@ async function createMonitoringRequest({ userId, originStationId, destinationSta
     travel_date: date,
     passengers,
     status: 'active',
+    selected_train_number: selectedTrainNumber || trainNumber || null,
+    exact_departure_time: exactDepartureTime || exactDeparture || null,
+    allowed_brands: Array.isArray(allowedBrands) ? allowedBrands : null,
     notes: JSON.stringify({
       userId: String(userId),
       chatId: String(userId),
@@ -97,9 +146,14 @@ async function createMonitoringRequest({ userId, originStationId, destinationSta
       destinationStationId,
       depStationCode: originStation.code,
       arvStationCode: destinationStation.code,
-      trainTypes,
-      departWindowStart,
-      departWindowEnd
+      exactDeparture,
+      exactArrival,
+      exactDepartureTime: exactDepartureTime || exactDeparture || null,
+      trainNumber,
+      selectedTrainNumber: selectedTrainNumber || trainNumber || null,
+      allowedBrands: Array.isArray(allowedBrands) ? allowedBrands : null,
+      apiOriginStationName,
+      apiDestinationStationName
     }),
     created_at: new Date().toISOString()
   };
@@ -252,6 +306,7 @@ async function cancelMonitoringRequest(shortId, chatId) {
 module.exports = {
   findStationsByTerm,
   findStationById,
+  listStations,
   createMonitoringRequest,
   getMonitoringRequestsForChat,
   getActiveMonitoringRequests,

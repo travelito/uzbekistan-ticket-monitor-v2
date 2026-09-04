@@ -16,7 +16,13 @@ const config = {
   supabaseUrl: process.env.SUPABASE_URL,
   supabaseServiceRoleKey: process.env.SUPABASE_SERVICE_ROLE_KEY,
   telegramBotToken: process.env.TELEGRAM_BOT_TOKEN,
-  checkIntervalMinutes: Number(process.env.CHECK_INTERVAL_MINUTES ?? 7),
+  // Empty list = whitelist disabled (allow all chats), e.g. for local dev without the env var set.
+  allowedTelegramIds: (process.env.ALLOWED_TELEGRAM_IDS || process.env.ALLOWED_USER_IDS || '')
+    .split(',')
+    .map((id) => id.trim())
+    .filter(Boolean)
+    .map(Number),
+  checkIntervalMinutes: Number(process.env.CHECK_INTERVAL_MINUTES ?? 3),
   defaultRoute: {
     date: process.env.DEFAULT_TEST_DATE || '2026-09-08',
     depStationCode: process.env.DEFAULT_DEP_STATION_CODE || '2900000',

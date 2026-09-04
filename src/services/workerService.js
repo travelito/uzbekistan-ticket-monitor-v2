@@ -23,6 +23,13 @@ async function processMonitoringRequest(request) {
     return null;
   }
 
+  if (!request.exact_departure || !request.exact_arrival) {
+    logger.warn('worker.request', 'Monitoring request missing exact departure/arrival time', {
+      requestId: request.id
+    });
+    return null;
+  }
+
   const searchParams = {
     date: request.travel_date,
     depStationCode: request.dep_station_code,
@@ -41,6 +48,18 @@ async function processMonitoringRequest(request) {
     (total, train) => total + train.cars.reduce((sum, car) => sum + car.availableSeats, 0),
     0
   );
+
+  // Train number is a secondary confirmation field only - it never gates the match itself.
+  const selectedTrainNumber = request.selected_train_number || request.train_number || null;
+  matchingTrains.forEach((train) => {
+    if (selectedTrainNumber && train.trainNumber !== selectedTrainNumber) {
+      logger.warn('worker.request', 'Matched train by exact time but selected train number changed since request creation', {
+        requestId: request.id,
+        expectedTrainNumber: selectedTrainNumber,
+        actualTrainNumber: train.trainNumber
+      });
+    }
+  });
 
   await saveAvailabilityCheck({
     requestId: request.id,
@@ -81,9 +100,12 @@ async function processMonitoringRequest(request) {
 }
 
 function buildMonitoringNotificationMessage(request, matchingTrains) {
+  // Show the monitored segment's stations, not the train's full route endpoints.
+  const origin = request.dep_station_name || matchingTrains[0]?.origin;
+  const destination = request.arv_station_name || matchingTrains[0]?.destination;
   const lines = matchingTrains.map((train) => {
     const carLines = train.cars.map((car) => `💺 ${car.type}: ${car.availableSeats}`).join('\n');
-    return `🚄 *Поезд ${train.trainNumber} (${train.trainType})*\n📍 ${train.origin} → ${train.destination}\n🕐 Отправление: ${train.departure}\n🕐 Прибытие: ${train.arrival}\n${carLines}`;
+    return `🚄 *Поезд ${train.trainNumber} (${train.trainType})*\n📍 ${origin} → ${destination}\n🕐 Отправление: ${train.departure}\n🕐 Прибытие: ${train.arrival}\n${carLines}`;
   });
 
   const shortId = String(request.id).substring(0, 8);

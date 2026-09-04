@@ -93,6 +93,27 @@ async function findStationsByTerm(term) {
   return Array.isArray(data) ? data : [];
 }
 
+async function listStations() {
+  const client = getSupabaseClient();
+  if (!client) {
+    logger.warn('supabase.station', 'Supabase client unavailable, cannot list stations');
+    return [];
+  }
+
+  const { data, error } = await client
+    .from('stations')
+    .select('*')
+    .order('name')
+    .limit(100);
+
+  if (error) {
+    logger.error('supabase.station', 'Failed to list stations', { error: error.message });
+    return [];
+  }
+
+  return Array.isArray(data) ? data : [];
+}
+
 async function getMonitoringRequestsForChat(chatId) {
   const client = getSupabaseClient();
   if (!client) {
@@ -158,6 +179,12 @@ async function getActiveMonitoringRequests() {
   return requests.map((req) => {
     // Enrich with parsed notes
     const parsed = parseNotes(req.notes);
+    const allowedBrands = Array.isArray(req.allowed_brands)
+      ? req.allowed_brands
+      : Array.isArray(parsed.allowedBrands)
+        ? parsed.allowedBrands
+        : null;
+
     return {
       ...req,
       dep_station_code: parsed.depStationCode || null,
@@ -166,9 +193,14 @@ async function getActiveMonitoringRequests() {
       arv_station_name: stationNamesById[req.destination_station_id] || null,
       user_id: req.user_id || parsed.userId || parsed.chatId || null,
       chat_id: req.chat_id || parsed.chatId || parsed.userId || null,
-      train_types: parsed.trainTypes || null,
-      depart_window_start: parsed.departWindowStart || null,
-      depart_window_end: parsed.departWindowEnd || null
+      exact_departure: req.exact_departure_time || parsed.exactDeparture || null,
+      exact_arrival: parsed.exactArrival || null,
+      exact_departure_time: req.exact_departure_time || parsed.exactDepartureTime || parsed.exactDeparture || null,
+      selected_train_number: req.selected_train_number || parsed.selectedTrainNumber || parsed.trainNumber || null,
+      train_number: req.selected_train_number || parsed.selectedTrainNumber || parsed.trainNumber || null,
+      allowed_brands: allowedBrands,
+      api_origin_station_name: parsed.apiOriginStationName || null,
+      api_destination_station_name: parsed.apiDestinationStationName || null
     };
   });
 }
@@ -177,6 +209,7 @@ module.exports = {
   getSupabaseClient,
   testSupabaseConnection,
   findStationsByTerm,
+  listStations,
   getMonitoringRequestsForChat,
   getActiveMonitoringRequests
 };

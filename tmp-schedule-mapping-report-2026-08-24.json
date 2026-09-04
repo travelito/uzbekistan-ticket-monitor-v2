@@ -1,0 +1,1421 @@
+{
+  "generatedAt": "2026-08-24T17:51:55.329Z",
+  "datesChecked": {
+    "weekday": "2026-08-26",
+    "weekend": "2026-08-29"
+  },
+  "stationCodes": {
+    "TAS": "2900000",
+    "SAM": "2900700",
+    "BUK": "2900800",
+    "HIV": "2900172"
+  },
+  "reportByDirection": {
+    "TAS->SAM": [
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "JamTrips",
+        "slot": "06:33-08:46",
+        "depTime": "06:33",
+        "matches": [
+          {
+            "trainNumber": "764Ф",
+            "departure": "26.08.2026 06:33",
+            "arrival": "26.08.2026 08:46",
+            "origin": "Ташкент Центральный",
+            "destination": "Карши",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "JamTrips",
+        "slot": "07:30-09:43",
+        "depTime": "07:30",
+        "matches": [
+          {
+            "trainNumber": "766Ф",
+            "departure": "26.08.2026 07:30",
+            "arrival": "26.08.2026 09:43",
+            "origin": "Ташкент Центральный",
+            "destination": "Бухара",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "JamTrips",
+        "slot": "08:00-10:25",
+        "depTime": "08:00",
+        "matches": [
+          {
+            "trainNumber": "768Ф",
+            "departure": "26.08.2026 07:55",
+            "arrival": "26.08.2026 10:25",
+            "origin": "Ташкент Центральный",
+            "destination": "Самарканд",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "JamTrips",
+        "slot": "08:30-10:49",
+        "depTime": "08:30",
+        "matches": [
+          {
+            "trainNumber": "770Ф",
+            "departure": "26.08.2026 08:30",
+            "arrival": "26.08.2026 10:49",
+            "origin": "Ташкент Центральный",
+            "destination": "Бухара",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "JamTrips",
+        "slot": "19:48-22:13",
+        "depTime": "19:48",
+        "matches": [
+          {
+            "trainNumber": "772Ф",
+            "departure": "26.08.2026 19:48",
+            "arrival": "26.08.2026 22:13",
+            "origin": "Ташкент Центральный",
+            "destination": "Бухара",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "Rotem",
+        "slot": "07:00-09:13",
+        "depTime": "07:00",
+        "matches": [
+          {
+            "trainNumber": "752Ж",
+            "departure": "26.08.2026 07:00",
+            "arrival": "26.08.2026 09:13",
+            "origin": "Ташкент",
+            "destination": "Хива",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "06:33-08:46",
+        "depTime": "06:33",
+        "matches": [
+          {
+            "trainNumber": "764Ф",
+            "departure": "29.08.2026 06:33",
+            "arrival": "29.08.2026 08:46",
+            "origin": "Toshkent Markaziy",
+            "destination": "Qarshi",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "07:30-09:43",
+        "depTime": "07:30",
+        "matches": [
+          {
+            "trainNumber": "766Ф",
+            "departure": "29.08.2026 07:30",
+            "arrival": "29.08.2026 09:43",
+            "origin": "Toshkent Markaziy",
+            "destination": "Buxoro",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "08:00-10:25",
+        "depTime": "08:00",
+        "matches": [
+          {
+            "trainNumber": "768Ф",
+            "departure": "29.08.2026 07:55",
+            "arrival": "29.08.2026 10:25",
+            "origin": "Toshkent Markaziy",
+            "destination": "Samarqand",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "08:30-10:49",
+        "depTime": "08:30",
+        "matches": [
+          {
+            "trainNumber": "770Ф",
+            "departure": "29.08.2026 08:30",
+            "arrival": "29.08.2026 10:49",
+            "origin": "Toshkent Markaziy",
+            "destination": "Buxoro",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "19:48-22:13",
+        "depTime": "19:48",
+        "matches": [
+          {
+            "trainNumber": "772Ф",
+            "departure": "29.08.2026 19:48",
+            "arrival": "29.08.2026 22:13",
+            "origin": "Toshkent Markaziy",
+            "destination": "Buxoro",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "06:10-08:23",
+        "depTime": "06:10",
+        "matches": [
+          {
+            "trainNumber": "778Ф",
+            "departure": "29.08.2026 06:10",
+            "arrival": "29.08.2026 08:23",
+            "origin": "Toshkent Markaziy",
+            "destination": "Buxoro",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "Rotem",
+        "slot": "07:00-09:13",
+        "depTime": "07:00",
+        "matches": [
+          {
+            "trainNumber": "752Ж",
+            "departure": "29.08.2026 07:00",
+            "arrival": "29.08.2026 09:13",
+            "origin": "Toshkent",
+            "destination": "Xiva",
+            "seats": 0
+          }
+        ]
+      }
+    ],
+    "SAM->TAS": [
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "JamTrips",
+        "slot": "05:21-07:42",
+        "depTime": "05:21",
+        "matches": [
+          {
+            "trainNumber": "771Ф",
+            "departure": "26.08.2026 05:21",
+            "arrival": "26.08.2026 07:42",
+            "origin": "Бухара",
+            "destination": "Ташкент Центральный",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "JamTrips",
+        "slot": "16:56-19:17",
+        "depTime": "16:56",
+        "matches": [
+          {
+            "trainNumber": "769Ф",
+            "departure": "26.08.2026 16:56",
+            "arrival": "26.08.2026 19:17",
+            "origin": "Бухара",
+            "destination": "Ташкент Центральный",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "JamTrips",
+        "slot": "17:40-20:07",
+        "depTime": "17:40",
+        "matches": [
+          {
+            "trainNumber": "767Ф",
+            "departure": "26.08.2026 17:40",
+            "arrival": "26.08.2026 20:12",
+            "origin": "Самарканд",
+            "destination": "Ташкент",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "JamTrips",
+        "slot": "18:15-20:30",
+        "depTime": "18:15",
+        "matches": [
+          {
+            "trainNumber": "765Ф",
+            "departure": "26.08.2026 18:15",
+            "arrival": "26.08.2026 20:30",
+            "origin": "Бухара",
+            "destination": "Ташкент Центральный",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "JamTrips",
+        "slot": "18:49-21:04",
+        "depTime": "18:49",
+        "matches": [
+          {
+            "trainNumber": "763Ф",
+            "departure": "26.08.2026 18:49",
+            "arrival": "26.08.2026 21:04",
+            "origin": "Карши",
+            "destination": "Ташкент Центральный",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "Rotem",
+        "slot": "12:41-15:06",
+        "depTime": "12:41",
+        "matches": []
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "05:21-07:42",
+        "depTime": "05:21",
+        "matches": [
+          {
+            "trainNumber": "771Ф",
+            "departure": "29.08.2026 05:21",
+            "arrival": "29.08.2026 07:42",
+            "origin": "Бухара",
+            "destination": "Ташкент Центральный",
+            "seats": 7
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "16:56-19:17",
+        "depTime": "16:56",
+        "matches": [
+          {
+            "trainNumber": "769Ф",
+            "departure": "29.08.2026 16:56",
+            "arrival": "29.08.2026 19:17",
+            "origin": "Бухара",
+            "destination": "Ташкент Центральный",
+            "seats": 31
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "17:40-20:07",
+        "depTime": "17:40",
+        "matches": [
+          {
+            "trainNumber": "767Ф",
+            "departure": "29.08.2026 17:40",
+            "arrival": "29.08.2026 20:12",
+            "origin": "Самарканд",
+            "destination": "Ташкент",
+            "seats": 63
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "18:15-20:30",
+        "depTime": "18:15",
+        "matches": [
+          {
+            "trainNumber": "765Ф",
+            "departure": "29.08.2026 18:15",
+            "arrival": "29.08.2026 20:30",
+            "origin": "Бухара",
+            "destination": "Ташкент Центральный",
+            "seats": 32
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "18:49-21:04",
+        "depTime": "18:49",
+        "matches": [
+          {
+            "trainNumber": "763Ф",
+            "departure": "29.08.2026 18:49",
+            "arrival": "29.08.2026 21:04",
+            "origin": "Карши",
+            "destination": "Ташкент Центральный",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "20:01-22:16",
+        "depTime": "20:01",
+        "matches": [
+          {
+            "trainNumber": "777Ф",
+            "departure": "29.08.2026 20:01",
+            "arrival": "29.08.2026 22:16",
+            "origin": "Бухара 1",
+            "destination": "Ташкент Центральный",
+            "seats": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "Rotem",
+        "slot": "12:41-15:06",
+        "depTime": "12:41",
+        "matches": []
+      }
+    ],
+    "TAS->BUK": [
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "JamTrips",
+        "slot": "03:34-07:42",
+        "depTime": "03:34",
+        "matches": []
+      },
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "JamTrips",
+        "slot": "07:30-11:42",
+        "depTime": "07:30",
+        "matches": [
+          {
+            "trainNumber": "766Ф",
+            "departure": "26.08.2026 07:30",
+            "arrival": "26.08.2026 11:39",
+            "origin": "Ташкент Центральный",
+            "destination": "Бухара",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "JamTrips",
+        "slot": "08:30-12:42",
+        "depTime": "08:30",
+        "matches": [
+          {
+            "trainNumber": "770Ф",
+            "departure": "26.08.2026 08:30",
+            "arrival": "26.08.2026 12:36",
+            "origin": "Ташкент Центральный",
+            "destination": "Бухара",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "JamTrips",
+        "slot": "19:48-00:06",
+        "depTime": "19:48",
+        "matches": [
+          {
+            "trainNumber": "772Ф",
+            "departure": "26.08.2026 19:48",
+            "arrival": "27.08.2026 00:01",
+            "origin": "Ташкент Центральный",
+            "destination": "Бухара",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "Rotem",
+        "slot": "07:00-10:54",
+        "depTime": "07:00",
+        "matches": [
+          {
+            "trainNumber": "752Ж",
+            "departure": "26.08.2026 07:00",
+            "arrival": "26.08.2026 10:54",
+            "origin": "Ташкент",
+            "destination": "Хива",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "03:34-07:42",
+        "depTime": "03:34",
+        "matches": []
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "07:30-11:42",
+        "depTime": "07:30",
+        "matches": [
+          {
+            "trainNumber": "766Ф",
+            "departure": "29.08.2026 07:30",
+            "arrival": "29.08.2026 11:39",
+            "origin": "Toshkent Markaziy",
+            "destination": "Buxoro",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "08:30-12:42",
+        "depTime": "08:30",
+        "matches": [
+          {
+            "trainNumber": "770Ф",
+            "departure": "29.08.2026 08:30",
+            "arrival": "29.08.2026 12:36",
+            "origin": "Toshkent Markaziy",
+            "destination": "Buxoro",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "19:48-00:06",
+        "depTime": "19:48",
+        "matches": [
+          {
+            "trainNumber": "772Ф",
+            "departure": "29.08.2026 19:48",
+            "arrival": "30.08.2026 00:01",
+            "origin": "Toshkent Markaziy",
+            "destination": "Buxoro",
+            "seats": 20
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "06:10-10:16",
+        "depTime": "06:10",
+        "matches": [
+          {
+            "trainNumber": "778Ф",
+            "departure": "29.08.2026 06:10",
+            "arrival": "29.08.2026 10:10",
+            "origin": "Toshkent Markaziy",
+            "destination": "Buxoro",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "Rotem",
+        "slot": "07:00-10:54",
+        "depTime": "07:00",
+        "matches": [
+          {
+            "trainNumber": "752Ж",
+            "departure": "29.08.2026 07:00",
+            "arrival": "29.08.2026 10:54",
+            "origin": "Toshkent",
+            "destination": "Xiva",
+            "seats": 0
+          }
+        ]
+      }
+    ],
+    "BUK->TAS": [
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "JamTrips",
+        "slot": "09:53-11:39",
+        "depTime": "09:53",
+        "matches": []
+      },
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "JamTrips",
+        "slot": "15:09-19:17",
+        "depTime": "15:09",
+        "matches": [
+          {
+            "trainNumber": "769Ф",
+            "departure": "26.08.2026 15:09",
+            "arrival": "26.08.2026 19:17",
+            "origin": "Бухара",
+            "destination": "Ташкент Центральный",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "JamTrips",
+        "slot": "16:22-20:30",
+        "depTime": "16:22",
+        "matches": [
+          {
+            "trainNumber": "765Ф",
+            "departure": "26.08.2026 16:22",
+            "arrival": "26.08.2026 20:30",
+            "origin": "Бухара",
+            "destination": "Ташкент Центральный",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "Rotem",
+        "slot": "10:37-15:06",
+        "depTime": "10:37",
+        "matches": []
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "09:53-11:39",
+        "depTime": "09:53",
+        "matches": []
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "15:09-19:17",
+        "depTime": "15:09",
+        "matches": [
+          {
+            "trainNumber": "769Ф",
+            "departure": "29.08.2026 15:09",
+            "arrival": "29.08.2026 19:17",
+            "origin": "Бухара",
+            "destination": "Ташкент Центральный",
+            "seats": 30
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "16:22-20:30",
+        "depTime": "16:22",
+        "matches": [
+          {
+            "trainNumber": "765Ф",
+            "departure": "29.08.2026 16:22",
+            "arrival": "29.08.2026 20:30",
+            "origin": "Бухара",
+            "destination": "Ташкент Центральный",
+            "seats": 30
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "18:14-22:16",
+        "depTime": "18:14",
+        "matches": [
+          {
+            "trainNumber": "777Ф",
+            "departure": "29.08.2026 18:14",
+            "arrival": "29.08.2026 22:16",
+            "origin": "Бухара 1",
+            "destination": "Ташкент Центральный",
+            "seats": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "Rotem",
+        "slot": "10:37-15:06",
+        "depTime": "10:37",
+        "matches": []
+      }
+    ],
+    "SAM->BUK": [
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "JamTrips",
+        "slot": "08:33-10:10",
+        "depTime": "08:33",
+        "matches": []
+      },
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "JamTrips",
+        "slot": "10:59-12:36",
+        "depTime": "10:59",
+        "matches": [
+          {
+            "trainNumber": "770Ф",
+            "departure": "26.08.2026 10:59",
+            "arrival": "26.08.2026 12:36",
+            "origin": "Ташкент Центральный",
+            "destination": "Бухара",
+            "seats": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "JamTrips",
+        "slot": "22:23-00:01",
+        "depTime": "22:23",
+        "matches": [
+          {
+            "trainNumber": "772Ф",
+            "departure": "26.08.2026 22:23",
+            "arrival": "27.08.2026 00:01",
+            "origin": "Ташкент Центральный",
+            "destination": "Бухара",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "Rotem",
+        "slot": "09:13-10:54",
+        "depTime": "09:13",
+        "matches": []
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "08:33-10:10",
+        "depTime": "08:33",
+        "matches": [
+          {
+            "trainNumber": "778Ф",
+            "departure": "29.08.2026 08:33",
+            "arrival": "29.08.2026 10:10",
+            "origin": "Ташкент Центральный",
+            "destination": "Бухара",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "10:59-12:36",
+        "depTime": "10:59",
+        "matches": [
+          {
+            "trainNumber": "770Ф",
+            "departure": "29.08.2026 10:59",
+            "arrival": "29.08.2026 12:36",
+            "origin": "Ташкент Центральный",
+            "destination": "Бухара",
+            "seats": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "22:23-00:01",
+        "depTime": "22:23",
+        "matches": [
+          {
+            "trainNumber": "772Ф",
+            "departure": "29.08.2026 22:23",
+            "arrival": "30.08.2026 00:01",
+            "origin": "Ташкент Центральный",
+            "destination": "Бухара",
+            "seats": 36
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "Rotem",
+        "slot": "09:13-10:54",
+        "depTime": "09:13",
+        "matches": []
+      }
+    ],
+    "BUK->SAM": [
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "JamTrips",
+        "slot": "03:34-05:11",
+        "depTime": "03:34",
+        "matches": [
+          {
+            "trainNumber": "771Ф",
+            "departure": "26.08.2026 03:34",
+            "arrival": "26.08.2026 05:11",
+            "origin": "Бухара",
+            "destination": "Ташкент Центральный",
+            "seats": 74
+          }
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "JamTrips",
+        "slot": "15:09-16:46",
+        "depTime": "15:09",
+        "matches": [
+          {
+            "trainNumber": "769Ф",
+            "departure": "26.08.2026 15:09",
+            "arrival": "26.08.2026 16:46",
+            "origin": "Бухара",
+            "destination": "Ташкент Центральный",
+            "seats": 16
+          }
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "JamTrips",
+        "slot": "16:22-18:05",
+        "depTime": "16:22",
+        "matches": [
+          {
+            "trainNumber": "765Ф",
+            "departure": "26.08.2026 16:22",
+            "arrival": "26.08.2026 18:05",
+            "origin": "Бухара",
+            "destination": "Ташкент Центральный",
+            "seats": 32
+          }
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "Rotem",
+        "slot": "10:37-12:41",
+        "depTime": "10:37",
+        "matches": []
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "03:34-05:11",
+        "depTime": "03:34",
+        "matches": [
+          {
+            "trainNumber": "771Ф",
+            "departure": "29.08.2026 03:34",
+            "arrival": "29.08.2026 05:11",
+            "origin": "Бухара",
+            "destination": "Ташкент Центральный",
+            "seats": 55
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "15:09-16:46",
+        "depTime": "15:09",
+        "matches": [
+          {
+            "trainNumber": "769Ф",
+            "departure": "29.08.2026 15:09",
+            "arrival": "29.08.2026 16:46",
+            "origin": "Бухара",
+            "destination": "Ташкент Центральный",
+            "seats": 60
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "16:22-18:05",
+        "depTime": "16:22",
+        "matches": [
+          {
+            "trainNumber": "765Ф",
+            "departure": "29.08.2026 16:22",
+            "arrival": "29.08.2026 18:05",
+            "origin": "Бухара",
+            "destination": "Ташкент Центральный",
+            "seats": 60
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "JamTrips",
+        "slot": "18:14-19:51",
+        "depTime": "18:14",
+        "matches": [
+          {
+            "trainNumber": "777Ф",
+            "departure": "29.08.2026 18:14",
+            "arrival": "29.08.2026 19:51",
+            "origin": "Бухара 1",
+            "destination": "Ташкент Центральный",
+            "seats": 60
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "Rotem",
+        "slot": "10:37-12:41",
+        "depTime": "10:37",
+        "matches": []
+      }
+    ],
+    "TAS->HIV": [
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "Rotem",
+        "slot": "07:00-14:36",
+        "depTime": "07:00",
+        "matches": [
+          {
+            "trainNumber": "752Ж",
+            "departure": "26.08.2026 07:00",
+            "arrival": "26.08.2026 14:36",
+            "origin": "Ташкент",
+            "destination": "Хива",
+            "seats": 205
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "Rotem",
+        "slot": "07:00-14:36",
+        "depTime": "07:00",
+        "matches": [
+          {
+            "trainNumber": "752Ж",
+            "departure": "29.08.2026 07:00",
+            "arrival": "29.08.2026 14:36",
+            "origin": "Ташкент",
+            "destination": "Хива",
+            "seats": 25
+          }
+        ]
+      }
+    ],
+    "SAM->HIV": [
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "Rotem",
+        "slot": "09:13-14:36",
+        "depTime": "09:13",
+        "matches": []
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "Rotem",
+        "slot": "09:13-14:36",
+        "depTime": "09:13",
+        "matches": []
+      }
+    ],
+    "BUK->HIV": [
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "Rotem",
+        "slot": "10:54-14:36",
+        "depTime": "10:54",
+        "matches": []
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "Rotem",
+        "slot": "10:54-14:36",
+        "depTime": "10:54",
+        "matches": []
+      }
+    ],
+    "HIV->BUK": [
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "Rotem",
+        "slot": "07:15-10:37",
+        "depTime": "07:15",
+        "matches": [
+          {
+            "trainNumber": "751М",
+            "departure": "26.08.2026 07:15",
+            "arrival": "26.08.2026 10:37",
+            "origin": "Хива",
+            "destination": "Ташкент",
+            "seats": 175
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "Rotem",
+        "slot": "07:15-10:37",
+        "depTime": "07:15",
+        "matches": [
+          {
+            "trainNumber": "751М",
+            "departure": "29.08.2026 07:15",
+            "arrival": "29.08.2026 10:37",
+            "origin": "Xiva",
+            "destination": "Toshkent",
+            "seats": 227
+          }
+        ]
+      }
+    ],
+    "HIV->SAM": [
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "Rotem",
+        "slot": "07:15-12:41",
+        "depTime": "07:15",
+        "matches": [
+          {
+            "trainNumber": "751М",
+            "departure": "26.08.2026 07:15",
+            "arrival": "26.08.2026 12:41",
+            "origin": "Хива",
+            "destination": "Ташкент",
+            "seats": 167
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "Rotem",
+        "slot": "07:15-12:41",
+        "depTime": "07:15",
+        "matches": [
+          {
+            "trainNumber": "751М",
+            "departure": "29.08.2026 07:15",
+            "arrival": "29.08.2026 12:41",
+            "origin": "Хива",
+            "destination": "Ташкент",
+            "seats": 185
+          }
+        ]
+      }
+    ],
+    "HIV->TAS": [
+      {
+        "date": "2026-08-26",
+        "day": "Wed",
+        "source": "Rotem",
+        "slot": "07:15-15:06",
+        "depTime": "07:15",
+        "matches": [
+          {
+            "trainNumber": "751М",
+            "departure": "26.08.2026 07:15",
+            "arrival": "26.08.2026 15:06",
+            "origin": "Хива",
+            "destination": "Ташкент",
+            "seats": 166
+          }
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "day": "Sat",
+        "source": "Rotem",
+        "slot": "07:15-15:06",
+        "depTime": "07:15",
+        "matches": [
+          {
+            "trainNumber": "751М",
+            "departure": "29.08.2026 07:15",
+            "arrival": "29.08.2026 15:06",
+            "origin": "Хива",
+            "destination": "Ташкент",
+            "seats": 176
+          }
+        ]
+      }
+    ]
+  },
+  "routeAddPlan": [
+    {
+      "train_number": "751М",
+      "route_stations": [
+        "Хива",
+        "Бухара",
+        "Самарканд",
+        "Ташкент"
+      ],
+      "in_db_before": true,
+      "action": "already_exists",
+      "endpoints_observed": [
+        "Хива -> Ташкент",
+        "Xiva -> Toshkent"
+      ],
+      "pairs_observed": [
+        "HIV->BUK",
+        "HIV->SAM",
+        "HIV->TAS"
+      ]
+    },
+    {
+      "train_number": "752Ж",
+      "route_stations": [
+        "Хива",
+        "Бухара",
+        "Самарканд",
+        "Ташкент"
+      ],
+      "in_db_before": true,
+      "action": "already_exists",
+      "endpoints_observed": [
+        "Ташкент -> Хива",
+        "Toshkent -> Xiva"
+      ],
+      "pairs_observed": [
+        "TAS->SAM",
+        "TAS->BUK",
+        "TAS->HIV"
+      ]
+    },
+    {
+      "train_number": "763Ф",
+      "route_stations": [
+        "Карши",
+        "Самарканд",
+        "Ташкент"
+      ],
+      "in_db_before": true,
+      "action": "already_exists",
+      "endpoints_observed": [
+        "Карши -> Ташкент Центральный"
+      ],
+      "pairs_observed": [
+        "SAM->TAS"
+      ]
+    },
+    {
+      "train_number": "764Ф",
+      "route_stations": [
+        "Карши",
+        "Самарканд",
+        "Ташкент"
+      ],
+      "in_db_before": true,
+      "action": "already_exists",
+      "endpoints_observed": [
+        "Ташкент Центральный -> Карши",
+        "Toshkent Markaziy -> Qarshi"
+      ],
+      "pairs_observed": [
+        "TAS->SAM"
+      ]
+    },
+    {
+      "train_number": "765Ф",
+      "route_stations": [
+        "Бухара",
+        "Самарканд",
+        "Ташкент"
+      ],
+      "in_db_before": true,
+      "action": "already_exists",
+      "endpoints_observed": [
+        "Бухара -> Ташкент Центральный"
+      ],
+      "pairs_observed": [
+        "SAM->TAS",
+        "BUK->TAS",
+        "BUK->SAM"
+      ]
+    },
+    {
+      "train_number": "766Ф",
+      "route_stations": [
+        "Бухара",
+        "Самарканд",
+        "Ташкент"
+      ],
+      "in_db_before": true,
+      "action": "already_exists",
+      "endpoints_observed": [
+        "Ташкент Центральный -> Бухара",
+        "Toshkent Markaziy -> Buxoro"
+      ],
+      "pairs_observed": [
+        "TAS->SAM",
+        "TAS->BUK"
+      ]
+    },
+    {
+      "train_number": "767Ф",
+      "route_stations": [
+        "Самарканд",
+        "Ташкент"
+      ],
+      "in_db_before": true,
+      "action": "already_exists",
+      "endpoints_observed": [
+        "Самарканд -> Ташкент"
+      ],
+      "pairs_observed": [
+        "SAM->TAS"
+      ]
+    },
+    {
+      "train_number": "768Ф",
+      "route_stations": [
+        "Самарканд",
+        "Ташкент"
+      ],
+      "in_db_before": true,
+      "action": "already_exists",
+      "endpoints_observed": [
+        "Ташкент Центральный -> Самарканд",
+        "Toshkent Markaziy -> Samarqand"
+      ],
+      "pairs_observed": [
+        "TAS->SAM"
+      ]
+    },
+    {
+      "train_number": "769Ф",
+      "route_stations": [
+        "Бухара",
+        "Самарканд",
+        "Ташкент"
+      ],
+      "in_db_before": true,
+      "action": "already_exists",
+      "endpoints_observed": [
+        "Бухара -> Ташкент Центральный"
+      ],
+      "pairs_observed": [
+        "SAM->TAS",
+        "BUK->TAS",
+        "BUK->SAM"
+      ]
+    },
+    {
+      "train_number": "770Ф",
+      "route_stations": [
+        "Бухара",
+        "Самарканд",
+        "Ташкент"
+      ],
+      "in_db_before": true,
+      "action": "already_exists",
+      "endpoints_observed": [
+        "Ташкент Центральный -> Бухара",
+        "Toshkent Markaziy -> Buxoro"
+      ],
+      "pairs_observed": [
+        "TAS->SAM",
+        "TAS->BUK",
+        "SAM->BUK"
+      ]
+    },
+    {
+      "train_number": "771Ф",
+      "route_stations": [
+        "Бухара",
+        "Самарканд",
+        "Ташкент"
+      ],
+      "in_db_before": true,
+      "action": "already_exists",
+      "endpoints_observed": [
+        "Бухара -> Ташкент Центральный"
+      ],
+      "pairs_observed": [
+        "SAM->TAS",
+        "BUK->SAM"
+      ]
+    },
+    {
+      "train_number": "772Ф",
+      "route_stations": [
+        "Бухара",
+        "Самарканд",
+        "Ташкент"
+      ],
+      "in_db_before": true,
+      "action": "already_exists",
+      "endpoints_observed": [
+        "Ташкент Центральный -> Бухара",
+        "Toshkent Markaziy -> Buxoro"
+      ],
+      "pairs_observed": [
+        "TAS->SAM",
+        "TAS->BUK",
+        "SAM->BUK"
+      ]
+    },
+    {
+      "train_number": "777Ф",
+      "route_stations": [
+        "Бухара",
+        "Самарканд",
+        "Ташкент"
+      ],
+      "in_db_before": true,
+      "action": "already_exists",
+      "endpoints_observed": [
+        "Бухара 1 -> Ташкент Центральный"
+      ],
+      "pairs_observed": [
+        "SAM->TAS",
+        "BUK->TAS",
+        "BUK->SAM"
+      ]
+    },
+    {
+      "train_number": "778Ф",
+      "route_stations": [
+        "Бухара",
+        "Самарканд",
+        "Ташкент"
+      ],
+      "in_db_before": true,
+      "action": "already_exists",
+      "endpoints_observed": [
+        "Toshkent Markaziy -> Buxoro",
+        "Ташкент Центральный -> Бухара"
+      ],
+      "pairs_observed": [
+        "TAS->SAM",
+        "TAS->BUK",
+        "SAM->BUK"
+      ]
+    }
+  ],
+  "activeSummary": {
+    "chatId": "92819144",
+    "totalActiveRequests": 32,
+    "matchedBefore": 0,
+    "matchedAfter": 0,
+    "delta": 0,
+    "changedRequests": []
+  }
+}
