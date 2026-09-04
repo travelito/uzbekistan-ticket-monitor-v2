@@ -170,5 +170,6 @@ function shouldNotify(currentPayload, lastPayload) {
 module.exports = {
   findMatchingTrains,
   buildNotificationPayload,
+  buildMatchingTrainsSignature,
   shouldNotify
 };

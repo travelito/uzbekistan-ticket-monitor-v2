@@ -64,8 +64,8 @@ async function processMonitoringRequest(request) {
   await saveAvailabilityCheck({
     requestId: request.id,
     searchMeta: searchParams,
-    rawResponse: response,
     normalizedTrains: normalized,
+    matchingTrains,
     available: matchingTrains.length > 0,
     availableSeats
   });
