@@ -157,5 +157,6 @@ function startScheduler() {
 module.exports = {
   processMonitoringRequest,
   runWorkerCycle,
-  startScheduler
+  startScheduler,
+  buildMonitoringNotificationMessage
 };
